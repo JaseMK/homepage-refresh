@@ -3,7 +3,7 @@
  */
 (function () {
 
-    const DATA_URL = '/data/iracing/2026S2.json';
+    const DATA_URL = 'data/iracing/2026S2.json';
 
     /* ------------------------------------------------------------------ */
     /*  DATE HELPERS                                                        */

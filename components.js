@@ -14,15 +14,15 @@
     /* ------------------------------------------------------------------ */
     const navHTML = `
 <nav id="nav">
-    <a href="/" class="nav-logo">
+    <a href="index.html" class="nav-logo">
         <span class="bracket">&lt;</span><span class="name">jc</span><span class="slash"> /&gt;</span>
     </a>
     <ul class="nav-tabs" id="navTabs">
-        <li><a href="/#about"><span class="tab-dot"></span>about.md</a></li>
-        <li><a href="/#connect"><span class="tab-dot"></span>contact.json</a></li>
-        <li><a href="/#work"><span class="tab-dot"></span>work/</a></li>
-        <li><a href="/#gallery"><span class="tab-dot"></span>gallery/</a></li>
-        <li><a href="/#pages"><span class="tab-dot"></span>pages/</a></li>
+        <li><a href="index.html#about"><span class="tab-dot"></span>about.md</a></li>
+        <li><a href="index.html#connect"><span class="tab-dot"></span>contact.json</a></li>
+        <li><a href="index.html#work"><span class="tab-dot"></span>work/</a></li>
+        <li><a href="index.html#gallery"><span class="tab-dot"></span>gallery/</a></li>
+        <li><a href="index.html#pages"><span class="tab-dot"></span>pages/</a></li>
     </ul>
     <div class="nav-toggle" id="navToggle" role="button" tabindex="0" aria-label="Toggle menu">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -149,9 +149,9 @@
     }
 
     Promise.all([
-        fetch('/data/research.json').then(r => r.json()),
-        fetch('/data/publications.json').then(r => r.json()),
-        fetch('/data/apps.json').then(r => r.json()),
+        fetch('data/research.json').then(r => r.json()),
+        fetch('data/publications.json').then(r => r.json()),
+        fetch('data/apps.json').then(r => r.json()),
     ]).then(([research, publications, apps]) => {
         renderResearch(research);
         renderPublications(publications);
