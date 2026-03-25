@@ -1,0 +1,158 @@
+{
+  "season": "iRacing 2026 Season 2",
+  "series": [
+    {
+      "name": "TCR Virtual Challenge - Fixed",
+      "short_name": "TCR Fixed",
+      "cars": ["Hyundai Elantra N TCR", "Honda Civic Type R TCR", "Hyundai Veloster N TCR", "Audi RS3 LMS Gen2 TCR"],
+      "race_duration": "20 mins",
+      "race_frequency": "Every 2 hours at :45",
+      "min_ir": 4.0,
+      "splits_at": 20,
+      "drops": 4,
+      "weeks": [
+        { "week": 1, "week_start": "2026-03-17", "track": "Charlotte Motor Speedway - Roval 2025", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 2, "week_start": "2026-03-24", "track": "Sebring International Raceway - International", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 28 },
+        { "week": 3, "week_start": "2026-03-31", "track": "Autódromo José Carlos Pace - Grand Prix", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0 },
+        { "week": 4, "week_start": "2026-04-07", "track": "Donington Park Racing Circuit - National", "temp_f": 65, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 5, "week_start": "2026-04-14", "track": "Rudskogen Motorsenter", "temp_f": 71, "temp_c": 21, "rain_chance_pct": 0 },
+        { "week": 6, "week_start": "2026-04-21", "track": "Nürburgring Combined - Gesamtstrecke 24h", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0, "race_duration": "3 laps" },
+        { "week": 7, "week_start": "2026-04-28", "track": "Silverstone Circuit - National", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 8, "week_start": "2026-05-05", "track": "WeatherTech Raceway at Laguna Seca - Full Course", "temp_f": 70, "temp_c": 21, "rain_chance_pct": 0 },
+        { "week": 9, "week_start": "2026-05-12", "track": "Watkins Glen International - Boot", "temp_f": 70, "temp_c": 21, "rain_chance_pct": 0 },
+        { "week": 10, "week_start": "2026-05-19", "track": "Snetterton Circuit - 300", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 29 },
+        { "week": 11, "week_start": "2026-05-26", "track": "Thruxton Circuit", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 12, "week_start": "2026-06-02", "track": "Mid-Ohio Sports Car Course - Full Course", "temp_f": 84, "temp_c": 29, "rain_chance_pct": 0 }
+      ]
+    },
+    {
+      "name": "GTE Sprint Series",
+      "short_name": "GTE Sprint",
+      "cars": ["Ford GTE", "Ferrari 488 GTE", "Porsche 911 RSR", "BMW M8 GTE", "Chevrolet Corvette C8.R GTE"],
+      "race_duration": "45-60 mins",
+      "race_frequency": "Every 2 hours on the hour",
+      "min_ir": 4.0,
+      "splits_at": 30,
+      "drops": 4,
+      "weeks": [
+        { "week": 1, "week_start": "2026-03-17", "track": "Sebring International Raceway - International", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 0, "race_duration": "60 mins" },
+        { "week": 2, "week_start": "2026-03-24", "track": "Autodromo Internazionale Enzo e Dino Ferrari - Grand Prix", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "45 mins" },
+        { "week": 3, "week_start": "2026-03-31", "track": "Mount Panorama Circuit", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "race_duration": "45 mins" },
+        { "week": 4, "week_start": "2026-04-07", "track": "Virginia International Raceway - Full Course", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "45 mins" },
+        { "week": 5, "week_start": "2026-04-14", "track": "Daytona International Speedway - Road Course", "temp_f": 73, "temp_c": 23, "rain_chance_pct": 26, "race_duration": "45 mins" },
+        { "week": 6, "week_start": "2026-04-21", "track": "Circuit de Spa-Francorchamps - Grand Prix Pits", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0, "race_duration": "60 mins" },
+        { "week": 7, "week_start": "2026-04-28", "track": "Watkins Glen International - Boot", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "45 mins" },
+        { "week": 8, "week_start": "2026-05-05", "track": "Autódromo José Carlos Pace - Grand Prix", "temp_f": 73, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "45 mins" },
+        { "week": 9, "week_start": "2026-05-12", "track": "Road Atlanta - Full Course", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "45 mins" },
+        { "week": 10, "week_start": "2026-05-19", "track": "Autódromo Hermanos Rodríguez - Grand Prix", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 33, "race_duration": "45 mins" },
+        { "week": 11, "week_start": "2026-05-26", "track": "Silverstone Circuit - Grand Prix", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0, "race_duration": "45 mins" },
+        { "week": 12, "week_start": "2026-06-02", "track": "Adelaide Street Circuit", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0, "race_duration": "45 mins" }
+      ]
+    },
+    {
+      "name": "Clio Cup",
+      "short_name": "Renault Clio",
+      "cars": ["Renault Clio"],
+      "race_duration": "15 mins",
+      "race_frequency": "Every hour at :00",
+      "min_ir": 4.0,
+      "splits_at": 20,
+      "drops": 4,
+      "weeks": [
+        { "week": 1, "week_start": "2026-03-17", "track": "Summit Point Raceway - Summit Point", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 0 },
+        { "week": 2, "week_start": "2026-03-24", "track": "Circuit de Lédenon", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 3, "week_start": "2026-03-31", "track": "WeatherTech Raceway at Laguna Seca - Full Course", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 4, "week_start": "2026-04-07", "track": "Okayama International Circuit - Full Course", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 35 },
+        { "week": 5, "week_start": "2026-04-14", "track": "Tsukuba Circuit - 2000 Full", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 6, "week_start": "2026-04-21", "track": "Lime Rock Park - Grand Prix", "temp_f": 65, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 7, "week_start": "2026-04-28", "track": "Oran Park Raceway - Grand Prix", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0 },
+        { "week": 8, "week_start": "2026-05-05", "track": "Oulton Park Circuit - International", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 27 },
+        { "week": 9, "week_start": "2026-05-12", "track": "Virginia International Raceway - Full Course", "temp_f": 77, "temp_c": 25, "rain_chance_pct": 0 },
+        { "week": 10, "week_start": "2026-05-19", "track": "Motorsport Arena Oschersleben - Grand Prix", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 11, "week_start": "2026-05-26", "track": "Rudskogen Motorsenter", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 12, "week_start": "2026-06-02", "track": "Circuito de Navarra - Speed Circuit - Medium", "temp_f": 70, "temp_c": 21, "rain_chance_pct": 0 }
+      ]
+    },
+    {
+      "name": "GT4 Falken Tyre Challenge",
+      "short_name": "GT4",
+      "cars": ["Porsche 718 Cayman GT4 Clubsport MR", "McLaren 570S GT4", "Aston Martin Vantage GT4", "Mercedes-AMG GT4", "BMW M4 G82 GT4 Evo", "Ford Mustang GT4"],
+      "race_duration": "20 mins",
+      "race_frequency": "Every 2 hours at :30",
+      "min_ir": 4.0,
+      "splits_at": 30,
+      "drops": 4,
+      "weeks": [
+        { "week": 1, "week_start": "2026-03-17", "track": "Adelaide Street Circuit", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0 },
+        { "week": 2, "week_start": "2026-03-24", "track": "Sebring International Raceway - International", "temp_f": 69, "temp_c": 20, "rain_chance_pct": 26 },
+        { "week": 3, "week_start": "2026-03-31", "track": "Sonoma Raceway - Sportscar Alt", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 4, "week_start": "2026-04-07", "track": "Donington Park Racing Circuit - National", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 5, "week_start": "2026-04-14", "track": "Barber Motorsports Park", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 0 },
+        { "week": 6, "week_start": "2026-04-21", "track": "Nürburgring Combined - Gesamtstrecke 24h", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "3 laps" },
+        { "week": 7, "week_start": "2026-04-28", "track": "Motorsport Arena Oschersleben - Grand Prix", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 8, "week_start": "2026-05-05", "track": "WeatherTech Raceway at Laguna Seca - Full Course", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 9, "week_start": "2026-05-12", "track": "Circuit of the Americas - Grand Prix", "temp_f": 70, "temp_c": 21, "rain_chance_pct": 0 },
+        { "week": 10, "week_start": "2026-05-19", "track": "Snetterton Circuit - 300", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 29 },
+        { "week": 11, "week_start": "2026-05-26", "track": "Fuji International Speedway - No Chicane", "temp_f": 70, "temp_c": 21, "rain_chance_pct": 0 },
+        { "week": 12, "week_start": "2026-06-02", "track": "Mid-Ohio Sports Car Course - Full Course", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 0 }
+      ]
+    },
+    {
+      "name": "IMSA Michelin Pilot Challenge",
+      "short_name": "IMSA MPC",
+      "cars": ["Hyundai Elantra N TCR", "Honda Civic Type R TCR", "Hyundai Veloster N TCR", "Audi RS3 LMS Gen2 TCR", "Porsche 718 Cayman GT4 Clubsport MR", "McLaren 570S GT4", "Aston Martin Vantage GT4", "Mercedes-AMG GT4", "BMW M4 G82 GT4 Evo", "Ford Mustang GT4"],
+      "race_duration": "120 mins",
+      "race_frequency": "Every other Saturday at 04:00 & 15:00 GMT, Sunday at 00:00 & 20:00 GMT",
+      "schedule_note": "Biweekly — even weeks (by race date)",
+      "min_ir": 4.0,
+      "splits_at": 40,
+      "drops": 2,
+      "weeks": [
+        { "week": 1, "week_start": "2026-03-24", "race_date": "2026-03-28", "track": "Sebring International Raceway - International", "temp_f": 81, "temp_c": 27, "rain_chance_pct": 0 },
+        { "week": 2, "week_start": "2026-04-07", "race_date": "2026-04-11", "track": "Donington Park Racing Circuit - National", "temp_f": 65, "temp_c": 19, "rain_chance_pct": 34 },
+        { "week": 3, "week_start": "2026-04-21", "race_date": "2026-04-25", "track": "Nürburgring Combined - Gesamtstrecke 24h", "temp_f": 65, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 4, "week_start": "2026-05-05", "race_date": "2026-05-09", "track": "WeatherTech Raceway at Laguna Seca - Full Course", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 5, "week_start": "2026-05-19", "race_date": "2026-05-23", "track": "Snetterton Circuit - 300", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0 },
+        { "week": 6, "week_start": "2026-06-02", "race_date": "2026-06-06", "track": "Mid-Ohio Sports Car Course - Full Course", "temp_f": 69, "temp_c": 21, "rain_chance_pct": 35 }
+      ]
+    },
+    {
+      "name": "IMSA Sportscar Endurance Challenge",
+      "short_name": "IMSA SC Endurance",
+      "cars": ["Ligier JS P320", "Porsche 718 Cayman GT4 Clubsport MR", "McLaren 570S GT4", "Aston Martin Vantage GT4", "Mercedes-AMG GT4", "BMW M4 G82 GT4 Evo", "Ford Mustang GT4"],
+      "race_duration": "120 mins",
+      "race_frequency": "Every other Saturday at 04:00 & 15:00 GMT, Sunday at 00:00 & 20:00 GMT",
+      "schedule_note": "Biweekly — odd weeks (by race date)",
+      "min_ir": 4.0,
+      "splits_at": 40,
+      "drops": 2,
+      "weeks": [
+        { "week": 1, "week_start": "2026-03-17", "race_date": "2026-03-21", "track": "Adelaide Street Circuit", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0 },
+        { "week": 2, "week_start": "2026-03-31", "race_date": "2026-04-04", "track": "Sonoma Raceway - Sportscar Alt", "temp_f": 69, "temp_c": 21, "rain_chance_pct": 0 },
+        { "week": 3, "week_start": "2026-04-14", "race_date": "2026-04-18", "track": "Barber Motorsports Park", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 32 },
+        { "week": 4, "week_start": "2026-04-28", "race_date": "2026-05-02", "track": "Motorsport Arena Oschersleben - Grand Prix", "temp_f": 66, "temp_c": 19, "rain_chance_pct": 28 },
+        { "week": 5, "week_start": "2026-05-12", "race_date": "2026-05-16", "track": "Circuit of the Americas - Grand Prix", "temp_f": 79, "temp_c": 26, "rain_chance_pct": 0 },
+        { "week": 6, "week_start": "2026-05-26", "race_date": "2026-05-30", "track": "Fuji International Speedway - No Chicane", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 31 }
+      ]
+    },
+    {
+      "name": "IMSA Endurance Series",
+      "short_name": "IMSA Endurance",
+      "cars": ["Dallara P217", "BMW M4 GT3 EVO", "Lamborghini Huracán GT3 EVO", "Mercedes-AMG GT3 2020", "Porsche 911 GT3 R (992)", "Ferrari 296 GT3", "Chevrolet Corvette Z06 GT3.R", "Ford Mustang GT3", "McLaren 720S GT3 EVO", "Acura NSX GT3 EVO 22", "Aston Martin Vantage GT3 EVO", "BMW M Hybrid V8", "Cadillac V-Series.R GTP", "Acura ARX-06 GTP", "Porsche 963 GTP", "Ferrari 499P"],
+      "race_duration": "160 mins",
+      "race_frequency": "Every other Saturday at 02:00, 07:00 & 18:00 GMT, Sunday at 14:00 GMT",
+      "schedule_note": "Biweekly — odd weeks (by race date). Team racing.",
+      "min_ir": 4.0,
+      "splits_at": 50,
+      "drops": 2,
+      "weeks": [
+        { "week": 1, "week_start": "2026-03-17", "race_date": "2026-03-21", "track": "Sebring International Raceway - International", "temp_f": 79, "temp_c": 26, "rain_chance_pct": 0 },
+        { "week": 2, "week_start": "2026-03-31", "race_date": "2026-04-04", "track": "Hockenheimring Baden-Württemberg - Grand Prix", "temp_f": 65, "temp_c": 19, "rain_chance_pct": 31 },
+        { "week": 3, "week_start": "2026-04-14", "race_date": "2026-04-18", "track": "Long Beach Street Circuit", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 0 },
+        { "week": 4, "week_start": "2026-04-28", "race_date": "2026-05-02", "track": "WeatherTech Raceway at Laguna Seca - Full Course", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0 },
+        { "week": 5, "week_start": "2026-05-12", "race_date": "2026-05-16", "track": "Road Atlanta - Full Course", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 28 },
+        { "week": 6, "week_start": "2026-05-26", "race_date": "2026-05-30", "track": "Detroit Grand Prix at Belle Isle", "temp_f": 79, "temp_c": 26, "rain_chance_pct": 0 }
+      ]
+    }
+  ]
+}
