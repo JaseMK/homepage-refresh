@@ -501,6 +501,87 @@
 .thumb-item:hover .thumb-caption { transform: translateY(0); }
 
 /* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 14, 30, 0.88);
+    animation: lbFadeIn 0.2s ease both;
+    cursor: pointer;
+}
+
+@keyframes lbFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.lightbox-frame {
+    position: relative;
+    z-index: 1;
+    max-width: 92vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: lbSlideIn 0.22s ease both;
+}
+
+@keyframes lbSlideIn {
+    from { opacity: 0; transform: scale(0.96) translateY(8px); }
+    to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+.lightbox-img {
+    display: block;
+    max-width: 92vw;
+    max-height: 82vh;
+    object-fit: contain;
+    border: 1px solid var(--border-lt);
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+    margin-top: 0.75rem;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.7);
+    width: 32px; height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    border-radius: 2px;
+}
+
+.lightbox-close:hover {
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 860px) {
