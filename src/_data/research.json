@@ -1,0 +1,23 @@
+[
+  {
+    "id": "project_01",
+    "year": 2024,
+    "title": "Placeholder Research Project Title One",
+    "description": "A brief description of this research project. This investigates an important question and uses novel methodology to approach the problem in a new way.",
+    "tags": ["KeywordA", "KeywordB", "MethodC"]
+  },
+  {
+    "id": "project_02",
+    "year": 2023,
+    "title": "Placeholder Research Project Title Two",
+    "description": "Description of a completed project. Contributed new findings to the literature and was conducted in collaboration with partners at other institutions.",
+    "tags": ["MethodX", "TopicY"]
+  },
+  {
+    "id": "project_03",
+    "year": 2022,
+    "title": "Placeholder Research Project Title Three",
+    "description": "An earlier project that formed the basis for subsequent research. Results were disseminated through conferences and peer-reviewed publications.",
+    "tags": ["AreaZ", "ToolA", "ThemeB"]
+  }
+]

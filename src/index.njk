@@ -1,0 +1,139 @@
+---
+layout: base.njk
+pageTitle: "Jason Carvalho — Developer & Researcher"
+navItem: home
+pageCSS: /css/home.css
+pageJS: /js/home.js
+---
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="home">
+
+    <div class="hero-display-name">
+        <span class="name-label">// jason-carvalho</span>
+        <h1>
+            <span class="name-first">Jason</span>
+            <span class="name-last">Carvalho</span>
+        </h1>
+    </div>
+
+    <div class="hero-inner">
+
+        <!-- Left panel: code block + actions -->
+        <div class="hero-code">
+            <div class="code-file">
+                <div class="code-file-header">
+                    <div class="file-dot r"></div>
+                    <div class="file-dot y"></div>
+                    <div class="file-dot g"></div>
+                    <span class="file-name">profile</span>
+                </div>
+                <div class="code-body">
+                    <div class="code-content" aria-label="Introduction">
+<code class="code-line"><span class="cm"># branch: <span style="color:var(--green)">main</span>  status: ✓ clean</span></code>
+<code class="code-line empty"></code>
+<code class="code-line"><span class="attr">role</span><span class="punc">:</span>         <span class="fn">software developer</span></code>
+<code class="code-line"><span class="attr">also</span><span class="punc">:</span>         <span class="str">researcher officer</span></code>
+<code class="code-line"><span class="attr">location</span><span class="punc">:</span>     <span class="str">Milton Keynes, UK</span></code>
+<code class="code-line"><span class="attr">affiliation</span><span class="punc">:</span>  <span class="str">Placeholder University</span></code>
+<code class="code-line empty"></code>
+<code class="code-line"><span class="cm">// technology &amp; human experience</span><span class="cursor" aria-hidden="true"></span></code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#connect" class="btn btn-primary">get in touch</a>
+                <a href="{{ '/work/' | url }}" class="btn btn-ghost">my work</a>
+            </div>
+        </div>
+
+        <!-- Right panel: photo carousel -->
+        <div class="hero-carousel" id="heroCarousel" aria-label="Photo carousel">
+            <div class="hc-header">
+                <div class="file-dot r"></div>
+                <div class="file-dot y"></div>
+                <div class="file-dot g"></div>
+                <span class="file-name">photos/</span>
+            </div>
+            <div class="hc-track">
+                <div class="hc-slide active">
+                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg' | url }}" alt="Corvette Z06 GT3 at Watkins Glen">
+                </div>
+                <div class="hc-slide">
+                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg' | url }}" alt="Corvette Z06 GT3 solo at Watkins Glen">
+                </div>
+                <div class="hc-slide">
+                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg' | url }}" alt="Ferrari 296 GT3 vs Corvette Z06 at Watkins Glen">
+                </div>
+                <div class="hc-slide">
+                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg' | url }}" alt="Hyundai Elantra N TCR at Donington Park">
+                </div>
+            </div>
+            <div class="hc-nav">
+                <button class="hc-prev" aria-label="Previous photo">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <div class="hc-dots" role="tablist"></div>
+                <button class="hc-next" aria-label="Next photo">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================
+     CONNECT
+     ============================================================ -->
+<section id="connect">
+    <div class="section-inner">
+        <div class="section-header">
+            <span class="sh-path">jason-carvalho/</span><span class="sh-name">contact</span>
+        </div>
+        <div class="section-title">Connect</div>
+        <div class="connect-code">
+            <div class="connect-code-header">
+                <span>// social links</span>
+            </div>
+            <div class="connect-links">
+
+                <a href="https://facebook.com/jason.carvalho" target="_blank" rel="noopener" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <div>
+                        <div class="social-platform">// facebook</div>
+                        <div class="social-handle">jason.carvalho</div>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com/jase_mk/" target="_blank" rel="noopener" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div>
+                        <div class="social-platform">// instagram</div>
+                        <div class="social-handle">@jase_mk</div>
+                    </div>
+                </a>
+
+                <a href="https://flickr.com/photos/jase_mk/" target="_blank" rel="noopener" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 12c0 3.074 2.494 5.568 5.568 5.568 3.075 0 5.569-2.494 5.569-5.568 0-3.075-2.494-5.568-5.569-5.568C2.494 6.432 0 8.925 0 12zm12.863 0c0 3.074 2.494 5.568 5.568 5.568C21.505 17.568 24 15.074 24 12c0-3.075-2.495-5.568-5.569-5.568-3.074 0-5.568 2.493-5.568 5.568z"/></svg>
+                    <div>
+                        <div class="social-platform">// flickr</div>
+                        <div class="social-handle">jase_mk</div>
+                    </div>
+                </a>
+
+                <a href="https://youtube.com/@JaseMK2001" target="_blank" rel="noopener" class="social-link" style="border-right:none;">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                    <div>
+                        <div class="social-platform">// youtube</div>
+                        <div class="social-handle">@JaseMK2001</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>

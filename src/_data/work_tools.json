@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tool-one",
+    "name": "PlaceholderToolOne",
+    "description": "A work-built tool or website. What it does, who it's for, and the problem it solves. Built as part of a research or professional project.",
+    "stack": "placeholder tech stack",
+    "url": "#",
+    "status": "live"
+  },
+  {
+    "id": "tool-two",
+    "name": "PlaceholderToolTwo",
+    "description": "Another professionally developed application. Deployed and used by stakeholders within the research or institutional context.",
+    "stack": "placeholder tech stack",
+    "url": "#",
+    "status": "live"
+  },
+  {
+    "id": "tool-three",
+    "name": "PlaceholderToolThree",
+    "description": "A research-adjacent tool that puts data in the hands of the people who need it through an accessible, open web interface.",
+    "stack": "placeholder tech stack",
+    "url": "#",
+    "status": "live"
+  }
+]

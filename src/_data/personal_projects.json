@@ -1,0 +1,32 @@
+[
+  {
+    "id": "proj-sw-01",
+    "type": "software",
+    "name": "PlaceholderProjectOne",
+    "description": "A personal software project — what it does and why I built it. Could be a fun tool, a utility for personal use, or a weekend experiment.",
+    "stack": "placeholder tech stack",
+    "url": "#",
+    "status": "live",
+    "year": 2024
+  },
+  {
+    "id": "proj-sw-02",
+    "type": "software",
+    "name": "PlaceholderProjectTwo",
+    "description": "Another personal project. Built to scratch an itch or explore a technology I was curious about. Source available on GitHub.",
+    "stack": "placeholder tech stack",
+    "url": "#",
+    "status": "in progress",
+    "year": 2023
+  },
+  {
+    "id": "proj-hw-01",
+    "type": "physical",
+    "name": "Placeholder Physical Build",
+    "description": "Something I designed and built in the real world — electronics, woodworking, fabrication, or a combination. Details on the build process and materials.",
+    "stack": null,
+    "url": "#",
+    "status": "complete",
+    "year": 2023
+  }
+]

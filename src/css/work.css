@@ -1,0 +1,298 @@
+/* ============================================================
+   WORK PAGE
+   ============================================================ */
+#work-page { background: var(--bg); }
+#work-page > .section-inner:nth-child(odd) { background: var(--bg-2); }
+
+/* Alternate section backgrounds */
+.work-section-alt { background: var(--bg-2); }
+
+/* ============================================================
+   RESEARCH CARDS
+   ============================================================ */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.rc {
+    background: var(--bg);
+    padding: 0;
+    position: relative;
+    transition: background 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.rc:hover { background: var(--surface); }
+
+.rc-fileheader {
+    background: var(--gutter-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.62rem;
+    color: var(--comment);
+}
+
+.rc-lang-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+}
+
+.rc-body { padding: 1.75rem 1.75rem 2rem; flex: 1; }
+
+.rc-year {
+    font-size: 0.62rem;
+    color: var(--orange);
+    margin-bottom: 0.85rem;
+}
+.rc-year::before { content: '@since '; color: var(--comment); }
+
+.rc-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.35;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.02em;
+}
+
+.rc-desc {
+    font-size: 0.77rem;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.rc-tags {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.rc:hover .tag { border-color: var(--border-lt); }
+
+/* ============================================================
+   TOOL / APP CARDS
+   ============================================================ */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.tool-card {
+    background: var(--bg);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: background 0.2s;
+}
+
+.tool-card:hover { background: var(--surface); }
+
+.tool-card-header {
+    background: var(--gutter-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.62rem;
+    color: var(--comment);
+}
+
+.tool-badge {
+    background: var(--surface);
+    color: var(--blue);
+    border: 1px solid var(--border-lt);
+    padding: 0.1rem 0.4rem;
+    font-size: 0.58rem;
+}
+
+.tool-body { padding: 1.75rem 1.75rem 2rem; flex: 1; }
+
+.tool-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+}
+
+.tool-desc {
+    font-size: 0.77rem;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.tool-footer {
+    padding: 0.85rem 1.75rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: var(--dim);
+}
+
+.tool-link-label {
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: gap 0.2s;
+}
+
+.tool-card:hover .tool-link-label { gap: 0.5rem; }
+
+/* ============================================================
+   PUBLICATIONS
+   ============================================================ */
+.pub-list { display: flex; flex-direction: column; }
+
+.pub-item {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.2s;
+}
+
+.pub-item:first-child { border-top: 1px solid var(--border); }
+.pub-item:hover { border-bottom-color: var(--blue); }
+
+.pub-ref {
+    font-size: 0.65rem;
+    color: var(--orange);
+    padding-top: 0.2rem;
+    text-align: right;
+}
+
+.pub-authors {
+    font-size: 0.65rem;
+    color: var(--comment);
+    margin-bottom: 0.35rem;
+}
+
+.pub-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.45;
+    margin-bottom: 0.35rem;
+}
+
+.pub-venue {
+    font-size: 0.72rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+.pub-year {
+    font-size: 0.65rem;
+    color: var(--green);
+    white-space: nowrap;
+    padding-top: 0.2rem;
+}
+
+/* ============================================================
+   EXTERNAL LINKS LIST
+   ============================================================ */
+.ext-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+}
+
+.ext-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    transition: background 0.15s;
+    position: relative;
+}
+
+.ext-item:last-child { border-bottom: none; }
+.ext-item:hover { background: var(--surface); }
+
+.ext-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 2px; height: 0;
+    background: var(--blue);
+    transition: height 0.2s;
+}
+
+.ext-item:hover::before { height: 100%; }
+
+.ext-icon {
+    width: 32px; height: 32px;
+    border-radius: 4px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--muted);
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.ext-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.15rem;
+}
+
+.ext-desc {
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.ext-url {
+    font-size: 0.65rem;
+    color: var(--comment);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.15s, gap 0.2s;
+}
+
+.ext-item:hover .ext-url { color: var(--blue); gap: 0.5rem; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+    .research-grid { grid-template-columns: 1fr 1fr; }
+    .tools-grid    { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+    .research-grid { grid-template-columns: 1fr; }
+    .tools-grid    { grid-template-columns: 1fr; }
+    .pub-item { grid-template-columns: 2.5rem 1fr; }
+    .pub-year { display: none; }
+    .ext-item { grid-template-columns: auto 1fr; }
+    .ext-url  { display: none; }
+}

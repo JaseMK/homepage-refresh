@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<div class="page-header">
+    <div class="page-header-inner">
+        <div class="page-breadcrumb">
+            <a href="{{ '/' | url }}">jason-carvalho</a>
+            <span class="bc-sep">/</span>
+            <span class="bc-current">{{ breadcrumb if breadcrumb else title | lower }}</span>
+        </div>
+        <h1 class="page-title">{{ title }}</h1>
+        {% if subtitle %}<p class="page-subtitle">{{ subtitle }}</p>{% endif %}
+    </div>
+</div>
+
+{{ content | safe }}
