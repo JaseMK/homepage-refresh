@@ -1,0 +1,337 @@
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: calc(44px + 4rem) 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 60% at 30% 50%, rgba(37,99,235,0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 70% at 70% 50%, rgba(124,58,237,0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ============================================================
+   DISPLAY NAME — full-width heading above both panels
+   ============================================================ */
+.hero-display-name {
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 3rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease both;
+}
+
+.hero-display-name .name-label {
+    font-size: 0.68rem;
+    font-family: var(--font-mono);
+    color: var(--comment);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.35rem;
+    display: block;
+}
+
+.hero-display-name h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+.hero-display-name h1 .name-first { display: block; }
+.hero-display-name h1 .name-last  { display: block; color: var(--blue); }
+
+/* ============================================================
+   HERO INNER — two-column grid
+   ============================================================ */
+.hero-inner {
+    max-width: 1160px;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: stretch;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-code {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    animation: fadeUp 0.8s 0.1s ease both;
+}
+
+.hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* ============================================================
+   CODE FILE PANEL
+   ============================================================ */
+.code-file {
+    background: var(--panel);
+    border: 1px solid var(--border-lt);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.code-file-header {
+    background: var(--gutter-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.55rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.65rem;
+    color: var(--comment);
+}
+
+.file-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+}
+.file-dot.r { background: #f87171; }
+.file-dot.y { background: #fbbf24; }
+.file-dot.g { background: #4ade80; }
+
+.file-name { color: var(--muted); margin-left: 0.25rem; }
+
+.code-body { display: flex; }
+
+.code-content {
+    padding: 1.25rem 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.85;
+    overflow-x: auto;
+    flex: 1;
+}
+
+.code-line       { display: block; white-space: pre; }
+.code-line.empty { height: 1.85em; }
+
+/* ============================================================
+   HERO CAROUSEL — right panel
+   ============================================================ */
+.hero-carousel {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-lt);
+    border-radius: 2px;
+    background: var(--panel);
+    overflow: hidden;
+    position: relative;
+    animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.hc-header {
+    background: var(--gutter-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.55rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.65rem;
+    color: var(--comment);
+    flex-shrink: 0;
+}
+
+.hc-track {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+    min-height: 0;
+}
+
+.hc-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+}
+
+.hc-slide.active { opacity: 1; }
+
+.hc-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hc-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.85rem;
+    background: var(--gutter-bg);
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.hc-prev,
+.hc-next {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 26px; height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.hc-prev:hover, .hc-next:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--hover);
+}
+
+.hc-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.hc-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border-lt);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.hc-dot.active {
+    background: var(--blue);
+    transform: scale(1.4);
+}
+
+/* ============================================================
+   CONNECT SECTION
+   ============================================================ */
+#connect { background: var(--bg); }
+
+.connect-code {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.connect-code-header {
+    background: var(--gutter-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.65rem;
+    color: var(--comment);
+}
+
+.connect-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s;
+    position: relative;
+}
+
+.social-link:last-child { border-right: none; }
+.social-link:hover { background: var(--hover); }
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 2px; height: 0;
+    transition: height 0.25s;
+}
+.social-link:hover::before { height: 100%; }
+
+.social-link:nth-child(1)::before { background: var(--blue); }
+.social-link:nth-child(2)::before { background: var(--purple); }
+.social-link:nth-child(3)::before { background: var(--orange); }
+.social-link:nth-child(4)::before { background: var(--red); }
+
+.social-icon {
+    width: 30px; height: 30px;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: color 0.2s;
+}
+
+.social-link:nth-child(1):hover .social-icon { color: var(--blue); }
+.social-link:nth-child(2):hover .social-icon { color: var(--purple); }
+.social-link:nth-child(3):hover .social-icon { color: var(--orange); }
+.social-link:nth-child(4):hover .social-icon { color: var(--red); }
+
+.social-platform {
+    font-size: 0.6rem;
+    color: var(--comment);
+    margin-bottom: 0.15rem;
+}
+
+.social-handle { font-size: 0.8rem; color: var(--text); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+    .connect-links { grid-template-columns: 1fr 1fr; }
+    .connect-links .social-link:nth-child(2) { border-right: none; }
+    .connect-links .social-link:nth-child(3) { border-right: 1px solid var(--border); }
+}
+
+@media (max-width: 860px) {
+    .hero { min-height: auto; padding: calc(44px + 2rem) 0 2rem; }
+    .hero-display-name { padding: 0 1.5rem; margin-bottom: 1.5rem; }
+    .hero-inner { grid-template-columns: 1fr; padding: 0 1.5rem; gap: 2rem; }
+    .hc-track { min-height: 240px; }
+}
+
+@media (max-width: 600px) {
+    .connect-links { grid-template-columns: 1fr; }
+    .connect-links .social-link { border-right: none; }
+}
