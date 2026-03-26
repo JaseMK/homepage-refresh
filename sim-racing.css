@@ -204,6 +204,29 @@
 
 .td-empty { cursor: default; }
 
+/* Completed race indicator */
+.td-completed .track-name {
+    font-weight: 700;
+    color: var(--green);
+}
+
+.track-tick {
+    display: inline-block;
+    margin-right: 0.3rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--green);
+    vertical-align: middle;
+    line-height: 1;
+}
+
+/* Keep completed style visible even in past-week rows */
+.week-past .td-completed .track-name,
+.week-past .td-track.td-completed:hover .track-name {
+    color: var(--green);
+    font-weight: 700;
+}
+
 .track-dash {
     color: var(--border-lt);
     display: block;

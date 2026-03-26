@@ -59,6 +59,7 @@
             min_ir:         series.min_ir,
             splits_at:      series.splits_at,
             drops:          series.drops,
+            completed:      week.completed === true,
         };
     }
 
@@ -167,7 +168,8 @@ ${noteRow}
                     return `<td class="td-track td-empty"><span class="track-dash">—</span></td>`;
                 }
                 const tip = JSON.stringify(buildTooltipData(s, week)).replace(/'/g, '&#39;');
-                return `<td class="td-track" data-tip='${tip}'><span class="track-name">${week.track}</span></td>`;
+                const done = week.completed === true;
+                return `<td class="td-track${done ? ' td-completed' : ''}" data-tip='${tip}'>${done ? '<span class="track-tick" aria-label="Completed">✓</span>' : ''}<span class="track-name">${week.track}</span></td>`;
             }).join('');
 
             return `
