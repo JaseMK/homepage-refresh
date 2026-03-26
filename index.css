@@ -4,8 +4,10 @@
 .hero {
     min-height: 100svh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 44px 0 0;  /* offset for nav */
+    justify-content: center;
+    padding: calc(44px + 4rem) 0 4rem;  /* offset for nav + breathing room */
     position: relative;
     overflow: hidden;
 }
@@ -36,25 +38,33 @@
 /* ============================================================
    HERO INNER — two-column grid
    ============================================================ */
+.hero-display-name {
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 3rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease both;
+}
+
 .hero-inner {
     max-width: 1160px;
-    margin: 0 auto;
     padding: 0 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: stretch;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-code {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 5rem 0;
-    position: relative;
-    z-index: 1;
-    animation: fadeUp 0.8s ease both;
+    gap: 1.75rem;
+    animation: fadeUp 0.8s 0.1s ease both;
 }
 
 /* ============================================================
@@ -228,10 +238,6 @@
 /* ============================================================
    DISPLAY NAME HEADING
    ============================================================ */
-.hero-display-name {
-    margin-bottom: 2rem;
-}
-
 .hero-display-name .name-label {
     font-size: 0.68rem;
     font-family: 'JetBrains Mono', monospace;
@@ -948,14 +954,13 @@
 }
 
 @media (max-width: 860px) {
-    .hero { min-height: auto; }
+    .hero { min-height: auto; padding: calc(44px + 2rem) 0 2rem; }
+    .hero-display-name { padding: 0 1.5rem; margin-bottom: 1.5rem; }
     .hero-inner {
         grid-template-columns: 1fr;
-        min-height: auto;
         padding: 0 1.5rem;
         gap: 2rem;
     }
-    .hero-code { padding: 4rem 0 0; }
     .hc-track { min-height: 240px; }
 
     #cv { padding: 3.5rem 0; }
