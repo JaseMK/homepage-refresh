@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="site.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=2">
 </head>
 <body>
 
@@ -31,14 +31,16 @@
             </h1>
         </div>
 
-        <div class="code-file">
-            <div class="code-file-header">
-                <div class="file-dot r"></div>
-                <div class="file-dot y"></div>
-                <div class="file-dot g"></div>
-                <span class="file-name">profile.yml</span>
-            </div>
-            <div class="code-body">
+        <div class="hero-body-row">
+
+            <div class="code-file">
+                <div class="code-file-header">
+                    <div class="file-dot r"></div>
+                    <div class="file-dot y"></div>
+                    <div class="file-dot g"></div>
+                    <span class="file-name">profile.yml</span>
+                </div>
+                <div class="code-body">
 <div class="code-content" aria-label="Introduction">
 <code class="code-line"><span class="cm"># branch: <span style="color:var(--green)">main</span>  status: ✓ clean</span></code>
 <code class="code-line empty"></code>
@@ -49,12 +51,47 @@
 <code class="code-line empty"></code>
 <code class="code-line"><span class="cm">// technology &amp; human experience</span><span class="cursor" aria-hidden="true"></span></code>
                 </div>
+                </div>
             </div>
-        </div>
+
+            <!-- Photo carousel -->
+            <div class="hero-carousel" id="heroCarousel" aria-label="Photo carousel">
+                <div class="hc-header">
+                    <div class="file-dot r"></div>
+                    <div class="file-dot y"></div>
+                    <div class="file-dot g"></div>
+                    <span class="file-name">photos/</span>
+                </div>
+                <div class="hc-track">
+                    <div class="hc-slide active">
+                        <img src="img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg" alt="Corvette Z06 GT3 at Watkins Glen">
+                    </div>
+                    <div class="hc-slide">
+                        <img src="img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg" alt="Corvette Z06 GT3 solo at Watkins Glen">
+                    </div>
+                    <div class="hc-slide">
+                        <img src="img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg" alt="Ferrari 296 GT3 vs Corvette Z06 at Watkins Glen">
+                    </div>
+                    <div class="hc-slide">
+                        <img src="img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg" alt="Hyundai Elantra N TCR at Donington Park">
+                    </div>
+                </div>
+                <div class="hc-nav">
+                    <button class="hc-prev" aria-label="Previous photo">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="hc-dots" role="tablist"></div>
+                    <button class="hc-next" aria-label="Next photo">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+
+        </div><!-- /.hero-body-row -->
 
         <div class="hero-actions" style="margin-top: 1.75rem;">
-            <a href="#about" class="btn btn-primary">explore</a>
-            <a href="#cv" class="btn btn-ghost">download cv</a>
+            <a href="#connect" class="btn btn-primary">get in touch</a>
+            <a href="#work" class="btn btn-ghost">my work</a>
         </div>
     </div>
 
@@ -254,5 +291,6 @@
 <div id="site-footer"></div>
 
 <script src="components.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

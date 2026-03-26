@@ -38,8 +38,132 @@
     position: relative;
     z-index: 1;
     animation: fadeUp 0.8s ease both;
-    max-width: 680px;
+    max-width: 900px;
     width: 100%;
+}
+
+/* ============================================================
+   HERO BODY ROW — profile.yml + carousel side by side
+   ============================================================ */
+.hero-body-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    background: var(--border-lt);  /* 1px gap acts as divider */
+    border: 1px solid var(--border-lt);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+/* code-file loses its own outer border inside the row */
+.hero-body-row .code-file {
+    flex: 1 1 0;
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid var(--border-lt);
+}
+
+/* ============================================================
+   HERO CAROUSEL
+   ============================================================ */
+.hero-carousel {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 0;
+    background: var(--panel);
+}
+
+.hc-header {
+    background: var(--gutter-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.55rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.65rem;
+    color: var(--comment);
+    flex-shrink: 0;
+}
+
+.hc-track {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: var(--surface);
+    min-height: 0;
+}
+
+.hc-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.hc-slide.active { opacity: 1; }
+
+.hc-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation bar */
+.hc-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0.75rem;
+    background: var(--gutter-bg);
+    border-top: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.hc-prev,
+.hc-next {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 24px; height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.hc-prev:hover,
+.hc-next:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--hover);
+}
+
+.hc-dots {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.hc-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border-lt);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.hc-dot.active {
+    background: var(--blue);
+    transform: scale(1.35);
 }
 
 /* Code block framing */
@@ -831,6 +955,9 @@
 @media (max-width: 860px) {
     .hero { min-height: auto; }
     .hero-code { padding: 5rem 1.5rem 2rem; max-width: 100%; }
+    .hero-body-row { flex-direction: column; }
+    .hero-body-row .code-file { border-right: none; border-bottom: 1px solid var(--border-lt); }
+    .hc-track { min-height: 180px; }
 
     #cv { padding: 3.5rem 0; }
 
