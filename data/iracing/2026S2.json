@@ -11,8 +11,8 @@
       "splits_at": 20,
       "drops": 4,
       "weeks": [
-        { "week": 1, "week_start": "2026-03-17", "track": "Charlotte Motor Speedway - Roval 2025", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "completed": false },
-        { "week": 2, "week_start": "2026-03-24", "track": "Sebring International Raceway - International", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 28, "completed": false },
+        { "week": 1, "week_start": "2026-03-17", "track": "Charlotte Motor Speedway - Roval 2025", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "completed": true },
+        { "week": 2, "week_start": "2026-03-24", "track": "Sebring International Raceway - International", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 28, "completed": true },
         { "week": 3, "week_start": "2026-03-31", "track": "Autódromo José Carlos Pace - Grand Prix", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "completed": false },
         { "week": 4, "week_start": "2026-04-07", "track": "Donington Park Racing Circuit - National", "temp_f": 65, "temp_c": 19, "rain_chance_pct": 0, "completed": false },
         { "week": 5, "week_start": "2026-04-14", "track": "Rudskogen Motorsenter", "temp_f": 71, "temp_c": 21, "rain_chance_pct": 0, "completed": false },
