@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ext-01",
+    "name": "Placeholder External Project",
+    "description": "A project website built or contributed to as part of work. Replace with real project name, description and URL.",
+    "url": "#",
+    "url_label": "placeholder.ac.uk"
+  },
+  {
+    "id": "ext-02",
+    "name": "Another External Project",
+    "description": "Another work-related project with an external web presence. Could be a research group site, tool portal, or collaborative platform.",
+    "url": "#",
+    "url_label": "placeholder-project.org"
+  }
+]
