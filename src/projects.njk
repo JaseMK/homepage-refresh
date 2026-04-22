@@ -7,102 +7,49 @@ subtitle: personal software, experiments & physical builds
 pageCSS: /css/projects.css
 ---
 
-{% set statusClass = {
-    "live":        "live",
-    "complete":    "complete",
-    "in progress": "inprogress"
-} %}
+<div class="page-content">
 
-<!-- ============================================================
-     SOFTWARE PROJECTS
-     ============================================================ -->
-<section id="software">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">projects/</span><span class="sh-name">software</span>
+    <!-- Software -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Software</h2></div>
+        <div class="project-grid">
+            {% for item in personal_projects %}
+            {% if item.type == 'software' %}
+            <a href="{{ item.url }}" class="project-card" {% if item.url != '#' %}target="_blank" rel="noopener"{% endif %}>
+                <div class="pc-head">
+                    <span class="pc-name">{{ item.name }}</span>
+                    <span class="pc-status pc-status--{{ item.status | replace(' ', '') }}">{{ item.status }}</span>
+                </div>
+                <p class="pc-desc">{{ item.description }}</p>
+                <div class="pc-foot">
+                    {% if item.stack %}<span class="pc-stack">{{ item.stack }}</span>{% endif %}
+                    <span class="pc-year">{{ item.year }}</span>
+                </div>
+            </a>
+            {% endif %}
+            {% endfor %}
         </div>
-        <div class="section-title">
-            <span class="kw-prefix">// code & web</span>
-            Software
-        </div>
+    </section>
 
-        <div class="subsection">
-            <div class="subsection-header">
-                <span class="ss-dot" style="background:var(--blue)"></span>
-                <span class="ss-fname">software & web projects</span>
-                <span class="ss-badge">code</span>
+    <!-- Builds -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Builds</h2></div>
+        <div class="project-grid">
+            {% for item in personal_projects %}
+            {% if item.type == 'physical' %}
+            <div class="project-card">
+                <div class="pc-head">
+                    <span class="pc-name">{{ item.name }}</span>
+                    <span class="pc-status pc-status--{{ item.status | replace(' ', '') }}">{{ item.status }}</span>
+                </div>
+                <p class="pc-desc">{{ item.description }}</p>
+                <div class="pc-foot">
+                    <span class="pc-year">{{ item.year }}</span>
+                </div>
             </div>
-            <div class="project-grid">
-                {% for item in personal_projects %}
-                {% if item.type == 'software' %}
-                <a href="{{ item.url }}" class="project-card" {% if item.url != '#' %}target="_blank" rel="noopener"{% endif %}>
-                    <div class="project-card-header">
-                        <span>
-                            <span class="project-type-dot software"></span>
-                            {{ item.id }}
-                        </span>
-                        <span class="project-badge {{ statusClass[item.status] }}">{{ item.status }}</span>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-year">{{ item.year }}</div>
-                        <div class="project-name">{{ item.name }}</div>
-                        <p class="project-desc">{{ item.description }}</p>
-                    </div>
-                    <div class="project-footer">
-                        {% if item.stack %}<span class="project-stack cm">// {{ item.stack }}</span>{% endif %}
-                        <span class="project-link-label">view <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                    </div>
-                </a>
-                {% endif %}
-                {% endfor %}
-            </div>
+            {% endif %}
+            {% endfor %}
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ============================================================
-     PHYSICAL BUILDS
-     ============================================================ -->
-<section id="builds" style="background:var(--bg-2)">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">projects/</span><span class="sh-name">builds</span>
-        </div>
-        <div class="section-title">
-            <span class="kw-prefix">// made by hand</span>
-            Builds
-        </div>
-
-        <div class="subsection">
-            <div class="subsection-header">
-                <span class="ss-dot" style="background:var(--orange)"></span>
-                <span class="ss-fname">physical builds</span>
-                <span class="ss-badge">hardware</span>
-            </div>
-            <div class="project-grid">
-                {% for item in personal_projects %}
-                {% if item.type == 'physical' %}
-                <a href="{{ item.url }}" class="project-card" {% if item.url != '#' %}target="_blank" rel="noopener"{% endif %}>
-                    <div class="project-card-header">
-                        <span>
-                            <span class="project-type-dot physical"></span>
-                            {{ item.id }}
-                        </span>
-                        <span class="project-badge {{ statusClass[item.status] }}">{{ item.status }}</span>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-year">{{ item.year }}</div>
-                        <div class="project-name">{{ item.name }}</div>
-                        <p class="project-desc">{{ item.description }}</p>
-                    </div>
-                    <div class="project-footer">
-                        <span></span>
-                        <span class="project-link-label">view <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                    </div>
-                </a>
-                {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
+</div>

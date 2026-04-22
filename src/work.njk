@@ -3,163 +3,72 @@ layout: page.njk
 title: Work
 navItem: work
 breadcrumb: work
-subtitle: publications, research & tools built for work
+subtitle: research, publications & tools built at work
 pageCSS: /css/work.css
 ---
 
-{% set dotColors = ['blue', 'purple', 'green'] %}
+<div class="page-content">
 
-<!-- ============================================================
-     RESEARCH PROJECTS
-     ============================================================ -->
-<section id="research">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">work/</span><span class="sh-name">research</span>
-        </div>
-        <div class="section-title">
-            <span class="kw-prefix">// projects</span>
-            Research
-        </div>
-
-        <div class="subsection">
-            <div class="subsection-header">
-                <span class="ss-dot" style="background:var(--green)"></span>
-                <span class="ss-fname">research projects</span>
-                <span class="ss-badge">research</span>
-            </div>
-            <div class="research-grid">
-                {% for item in research %}
-                <div class="rc">
-                    <div class="rc-fileheader">
-                        <div class="rc-lang-dot" style="background:var(--{{ dotColors[loop.index0 % 3] }})"></div>
-                        <span>{{ item.id }}</span>
-                    </div>
-                    <div class="rc-body">
-                        <div class="rc-year">{{ item.year }}</div>
-                        <h3 class="rc-title">{{ item.title }}</h3>
-                        <p class="rc-desc">{{ item.description }}</p>
-                        <div class="rc-tags">
-                            {% for tag in item.tags %}
-                            <span class="tag">{{ tag }}</span>
-                            {% endfor %}
-                        </div>
-                    </div>
+    <!-- Research -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Research</h2></div>
+        {% for item in research %}
+        <div class="research-row">
+            <span class="rr-year">{{ item.year }}</span>
+            <div class="rr-body">
+                <div class="rr-title">{{ item.title }}</div>
+                <div class="rr-tags">
+                    {% for tag in item.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
-    </div>
-</section>
+        {% endfor %}
+    </section>
 
-<!-- ============================================================
-     TOOLS & APPLICATIONS
-     ============================================================ -->
-<section id="tools" class="work-section-alt">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">work/</span><span class="sh-name">tools</span>
-        </div>
-        <div class="section-title">
-            <span class="kw-prefix">// built for work</span>
-            Tools & Applications
-        </div>
-
-        <div class="subsection">
-            <div class="subsection-header">
-                <span class="ss-dot" style="background:var(--blue)"></span>
-                <span class="ss-fname">apps &amp; tools</span>
-                <span class="ss-badge">built</span>
+    <!-- Publications -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Publications</h2></div>
+        {% for item in publications %}
+        <div class="pub-row">
+            <span class="pub-num">[{{ loop.index | zeroPad(2) }}]</span>
+            <div class="pub-body">
+                <div class="pub-authors">{{ item.authors }}</div>
+                <div class="pub-title">{{ item.title }}</div>
+                <div class="pub-venue">{{ item.venue }}</div>
             </div>
-            <div class="tools-grid">
-                {% for item in work_tools %}
-                <a href="{{ item.url }}" class="tool-card" {% if item.url != '#' %}target="_blank" rel="noopener"{% endif %}>
-                    <div class="tool-card-header">
-                        <span>{{ item.id }}/</span>
-                        <span class="tool-badge">{{ item.status }}</span>
-                    </div>
-                    <div class="tool-body">
-                        <div class="tool-name">{{ item.name }}</div>
-                        <p class="tool-desc">{{ item.description }}</p>
-                    </div>
-                    <div class="tool-footer">
-                        <span class="cm">// {{ item.stack }}</span>
-                        <span class="tool-link-label">visit <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                    </div>
-                </a>
-                {% endfor %}
-            </div>
+            <span class="pub-year">{{ item.year }}</span>
         </div>
-    </div>
-</section>
+        {% endfor %}
+    </section>
 
-<!-- ============================================================
-     EXTERNAL PROJECT LINKS
-     ============================================================ -->
-<section id="external">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">work/</span><span class="sh-name">projects</span>
-        </div>
-        <div class="section-title">
-            <span class="kw-prefix">// external sites</span>
-            Project Websites
-        </div>
-
-        <div class="subsection">
-            <div class="subsection-header">
-                <span class="ss-dot" style="background:var(--purple)"></span>
-                <span class="ss-fname">external work projects</span>
-                <span class="ss-badge">links</span>
-            </div>
-            <div class="ext-list">
-                {% for item in work_external %}
-                <a href="{{ item.url }}" class="ext-item" {% if item.url != '#' %}target="_blank" rel="noopener"{% endif %}>
-                    <div class="ext-icon">↗</div>
-                    <div>
-                        <div class="ext-name">{{ item.name }}</div>
-                        <div class="ext-desc">{{ item.description }}</div>
-                    </div>
-                    <span class="ext-url">{{ item.url_label }} <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ============================================================
-     PUBLICATIONS
-     ============================================================ -->
-<section id="publications" class="work-section-alt">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">work/</span><span class="sh-name">publications</span>
-        </div>
-        <div class="section-title">
-            <span class="kw-prefix">// peer-reviewed</span>
-            Publications
-        </div>
-
-        <div class="subsection">
-            <div class="subsection-header">
-                <span class="ss-dot" style="background:var(--orange)"></span>
-                <span class="ss-fname">publications</span>
-                <span class="ss-badge">papers</span>
-            </div>
-            <div class="pub-list">
-                {% for item in publications %}
-                <div class="pub-item">
-                    <span class="pub-ref">[{{ loop.index | zeroPad(2) }}]</span>
-                    <div>
-                        <div class="pub-authors">{{ item.authors }}</div>
-                        <div class="pub-title">{{ item.title }}</div>
-                        <div class="pub-venue">{{ item.venue }}</div>
-                    </div>
-                    <span class="pub-year">{{ item.year }}</span>
+    <!-- Tools & Applications -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Tools &amp; Applications</h2></div>
+        <div class="tool-grid">
+            {% for item in work_tools %}
+            <a href="{{ item.url }}" class="tool-card" {% if item.url != '#' %}target="_blank" rel="noopener"{% endif %}>
+                <div class="tc-head">
+                    <span class="tc-name">{{ item.name }}</span>
+                    <span class="tc-status">{{ item.status }}</span>
                 </div>
-                {% endfor %}
-            </div>
+                <p class="tc-desc">{{ item.description }}</p>
+                <span class="tc-stack">{{ item.stack }}</span>
+            </a>
+            {% endfor %}
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- External Project Websites -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Project Websites</h2></div>
+        {% for item in work_external %}
+        <a href="{{ item.url }}" class="ext-row" {% if item.url != '#' %}target="_blank" rel="noopener"{% endif %}>
+            <span class="ext-name">{{ item.name }}</span>
+            <span class="ext-url">{{ item.url_label }} ↗</span>
+        </a>
+        {% endfor %}
+    </section>
+
+</div>
