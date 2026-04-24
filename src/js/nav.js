@@ -11,7 +11,7 @@
     // Subtle border darkening on scroll
     window.addEventListener('scroll', function () {
         nav.style.borderBottomColor = window.scrollY > 10
-            ? '#c5ceee'
+            ? '#bec9e0'
             : 'var(--border)';
     }, { passive: true });
 
