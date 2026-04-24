@@ -2,14 +2,16 @@
    DESIGN TOKENS
    ============================================================ */
 :root {
-    --bg:      #f5f7ff;
-    --bg2:     #edf0fc;
-    --panel:   #ffffff;
-    --border:  #dde3f4;
-    --blue:    #2563eb;
-    --green:   #16a34a;
-    --text:    #0f172a;
-    --muted:   #4a5680;
-    --dim:     #9aa5c8;
+    --bg:        #f6f8fc;
+    --bg2:       #edf0f9;
+    --panel:     #ffffff;
+    --border:    #dae0f0;
+    --blue:      #4055e8;
+    --green:     #16a34a;
+    --text:      #141929;
+    --muted:     #56668f;
+    --dim:       #8a9ac4;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-serif:'Newsreader', Georgia, serif;
     --font-mono: 'JetBrains Mono', monospace;
 }
