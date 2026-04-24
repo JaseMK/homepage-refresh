@@ -7,7 +7,7 @@
     <meta name="description" content="Developer &amp; Researcher — Milton Keynes, UK">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/homepage-refresh/css/tokens.css">
     <link rel="stylesheet" href="/homepage-refresh/css/base.css">
     <link rel="stylesheet" href="/homepage-refresh/css/sim-racing.css">
@@ -15,15 +15,12 @@
 <body>
 
 <nav id="nav">
-    <a href="/homepage-refresh/" class="nav-logo">
-        <span class="bracket">&lt;</span><span class="name">jc</span><span class="slash"> /&gt;</span>
-    </a>
+    <a href="/homepage-refresh/" class="nav-logo">Jason Carvalho</a>
     <ul class="nav-tabs" id="navTabs">
-        <li><a href="/homepage-refresh/"              ><span class="tab-dot"></span>home</a></li>
-        <li><a href="/homepage-refresh/work/"         ><span class="tab-dot"></span>work</a></li>
-        <li><a href="/homepage-refresh/projects/"     ><span class="tab-dot"></span>projects</a></li>
-        <li><a href="/homepage-refresh/photos/"       ><span class="tab-dot"></span>photos</a></li>
-        <li><a href="/homepage-refresh/sim-racing/"   class="active"><span class="tab-dot"></span>sim racing</a></li>
+        <li><a href="/homepage-refresh/#work">Work</a></li>
+        <li><a href="/homepage-refresh/#projects">Projects</a></li>
+        <li><a href="/homepage-refresh/#photos">Photos</a></li>
+        <li><a href="/homepage-refresh/sim-racing/" class="active">Sim Racing ↗</a></li>
     </ul>
     <div class="nav-toggle" id="navToggle" role="button" tabindex="0" aria-label="Toggle menu">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -42,231 +39,133 @@
             <span class="bc-current">sim-racing</span>
         </div>
         <h1 class="page-title">Sim Racing</h1>
-        <p class="page-subtitle">Resources, setups &amp; tools // iRacing · Assetto Corsa</p>
+        <p class="page-subtitle">resources, setups &amp; tools · iRacing · Assetto Corsa</p>
     </div>
 </div>
 
 
-<!-- ============================================================
-     IRACING SCHEDULE
-     ============================================================ -->
-<section id="schedule">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">sim-racing/</span><span class="sh-name">schedule</span>
-        </div>
-        <div class="section-title">iRacing Schedule <span class="cm">// 2026 S2</span></div>
+<div class="page-content">
 
+    <!-- iRacing Schedule -->
+    <section class="site-section">
+        <div class="site-section-header">
+            <h2>iRacing Schedule</h2>
+            <span class="schedule-season">2026 S2</span>
+        </div>
         <div id="schedule-container" data-json="/homepage-refresh/data/iracing/2026S2.json">
-            <div class="tools-placeholder">
-                <div>
-                    <span class="placeholder-label">// schedule/2026S2.json</span>
-                    <span class="cm">// Loading schedule…</span>
-                </div>
-            </div>
+            <p class="schedule-loading">Loading schedule…</p>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ============================================================
-     REPLAYS
-     ============================================================ -->
-<section id="replays">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">sim-racing/</span><span class="sh-name">replays</span>
-        </div>
-        <div class="section-title">Replay Videos</div>
-
+    <!-- Replays -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Replays</h2></div>
         <div class="replay-grid">
 
             <a href="#" target="_blank" rel="noopener" class="replay-card">
-                <div class="replay-thumb">
-                    <div class="replay-thumb-placeholder">replay_01.jpg</div>
-                    <div class="replay-play">
-                        <div class="replay-play-btn">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                        </div>
+                <div class="rc-thumb">
+                    <div class="rc-thumb-placeholder">replay_01</div>
+                    <div class="rc-play">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                     </div>
                 </div>
-                <div class="replay-info">
-                    <div class="replay-meta">
-                        <span>TCR Fixed</span>
-                        <span class="replay-meta-sep">·</span>
-                        <span>Charlotte Roval</span>
-                    </div>
-                    <div class="replay-title">Placeholder — Race replay onboard</div>
-                    <div class="replay-link-label">
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-                        watch on YouTube
-                    </div>
+                <div class="rc-info">
+                    <div class="rc-meta">TCR Fixed · Charlotte Roval</div>
+                    <div class="rc-title">Placeholder — Race replay onboard</div>
                 </div>
             </a>
 
             <a href="#" target="_blank" rel="noopener" class="replay-card">
-                <div class="replay-thumb">
-                    <div class="replay-thumb-placeholder">replay_02.jpg</div>
-                    <div class="replay-play">
-                        <div class="replay-play-btn">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                        </div>
+                <div class="rc-thumb">
+                    <div class="rc-thumb-placeholder">replay_02</div>
+                    <div class="rc-play">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                     </div>
                 </div>
-                <div class="replay-info">
-                    <div class="replay-meta">
-                        <span>GTE Sprint</span>
-                        <span class="replay-meta-sep">·</span>
-                        <span>Spa-Francorchamps</span>
-                    </div>
-                    <div class="replay-title">Placeholder — Hotlap &amp; setup walkthrough</div>
-                    <div class="replay-link-label">
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-                        watch on YouTube
-                    </div>
+                <div class="rc-info">
+                    <div class="rc-meta">GTE Sprint · Spa-Francorchamps</div>
+                    <div class="rc-title">Placeholder — Hotlap &amp; setup walkthrough</div>
                 </div>
             </a>
 
             <a href="#" target="_blank" rel="noopener" class="replay-card">
-                <div class="replay-thumb">
-                    <div class="replay-thumb-placeholder">replay_03.jpg</div>
-                    <div class="replay-play">
-                        <div class="replay-play-btn">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                        </div>
+                <div class="rc-thumb">
+                    <div class="rc-thumb-placeholder">replay_03</div>
+                    <div class="rc-play">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                     </div>
                 </div>
-                <div class="replay-info">
-                    <div class="replay-meta">
-                        <span>GT4</span>
-                        <span class="replay-meta-sep">·</span>
-                        <span>Nürburgring</span>
-                    </div>
-                    <div class="replay-title">Placeholder — Qualifying lap analysis</div>
-                    <div class="replay-link-label">
-                        <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-                        watch on YouTube
-                    </div>
+                <div class="rc-info">
+                    <div class="rc-meta">GT4 · Nürburgring</div>
+                    <div class="rc-title">Placeholder — Qualifying lap analysis</div>
                 </div>
             </a>
 
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ============================================================
-     RESOURCES
-     ============================================================ -->
-<section id="resources">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">sim-racing/</span><span class="sh-name">resources</span>
+    <!-- Resources -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Resources</h2></div>
+        <a href="#" target="_blank" rel="noopener" class="resource-row">
+            <span class="res-label">iRacing Profile</span>
+            <span class="res-desc">Stats, licence class, series history and results · iracing.com ↗</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="resource-row">
+            <span class="res-label">RaceLabs Dashboard</span>
+            <span class="res-desc">Live telemetry overlays and race data analysis · racela.bs ↗</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="resource-row">
+            <span class="res-label">Setup Sheet</span>
+            <span class="res-desc">Car setups by track — suspension, tyre pressures, aero · docs.google.com ↗</span>
+        </a>
+        <a href="https://youtube.com/@JaseMK2001" target="_blank" rel="noopener" class="resource-row">
+            <span class="res-label">YouTube — Onboards &amp; Replays</span>
+            <span class="res-desc">Race footage, hotlap videos and setup walkthroughs · youtube.com/@JaseMK2001 ↗</span>
+        </a>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="site-section">
+        <div class="site-section-header"><h2>Screenshots</h2></div>
+        <div class="photo-grid">
+            <button class="photo-item"
+                data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg"
+                data-caption="Corvette Z06 GT3 — Watkins Glen">
+                <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg"
+                     alt="Corvette Z06 GT3, Watkins Glen" loading="lazy">
+            </button>
+            <button class="photo-item"
+                data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg"
+                data-caption="Corvette Z06 GT3 — Watkins Glen solo">
+                <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg"
+                     alt="Corvette Z06 GT3, Watkins Glen solo" loading="lazy">
+            </button>
+            <button class="photo-item"
+                data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg"
+                data-caption="Ferrari 296 GT3 vs Corvette Z06 — Watkins Glen">
+                <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg"
+                     alt="Ferrari 296 GT3 vs Corvette Z06, Watkins Glen" loading="lazy">
+            </button>
+            <button class="photo-item"
+                data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg"
+                data-caption="Hyundai Elantra N TCR — Donington Park">
+                <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg"
+                     alt="Hyundai Elantra N TCR, Donington Park" loading="lazy">
+            </button>
         </div>
-        <div class="section-title">External Resources</div>
+    </section>
 
-        <div class="resource-list">
+</div>
 
-            <a href="#" target="_blank" rel="noopener" class="resource-item">
-                <div class="resource-icon">iR</div>
-                <div>
-                    <div class="resource-name">iRacing Profile</div>
-                    <div class="resource-desc">Stats, licence class, series history and results</div>
-                </div>
-                <span class="resource-url">iracing.com <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </a>
-
-            <a href="#" target="_blank" rel="noopener" class="resource-item">
-                <div class="resource-icon">RL</div>
-                <div>
-                    <div class="resource-name">RaceLabs Dashboard</div>
-                    <div class="resource-desc">Live telemetry overlays and race data analysis</div>
-                </div>
-                <span class="resource-url">racela.bs <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </a>
-
-            <a href="#" target="_blank" rel="noopener" class="resource-item">
-                <div class="resource-icon">🏁</div>
-                <div>
-                    <div class="resource-name">Setup Sheet</div>
-                    <div class="resource-desc">Car setups by track — suspension, tyre pressures, aero</div>
-                </div>
-                <span class="resource-url">docs.google.com <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </a>
-
-            <a href="https://youtube.com/@JaseMK2001" target="_blank" rel="noopener" class="resource-item">
-                <div class="resource-icon">YT</div>
-                <div>
-                    <div class="resource-name">YouTube — Onboards &amp; Replays</div>
-                    <div class="resource-desc">Race footage, hotlap videos and setup walkthroughs</div>
-                </div>
-                <span class="resource-url">youtube.com/@JaseMK2001 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-            </a>
-
-        </div>
-    </div>
-</section>
-
-<!-- ============================================================
-     SCREENSHOTS
-     ============================================================ -->
-<section id="gallery">
-    <div class="section-inner">
-        <div class="section-header">
-            <span class="sh-path">sim-racing/</span><span class="sh-name">screenshots</span>
-        </div>
-        <div class="section-title">Screenshots</div>
-
-        <div class="thumb-grid">
-
-            <a href="#" class="thumb-item"
-               data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg"
-               data-caption="Corvette Z06 GT3 — Watkins Glen">
-                <div class="thumb-inner">
-                    <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg"
-                         alt="Corvette Z06 GT3 racing at Watkins Glen" loading="lazy">
-                </div>
-                <div class="thumb-caption">Corvette Z06 GT3 — Watkins Glen</div>
-            </a>
-
-            <a href="#" class="thumb-item"
-               data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg"
-               data-caption="Corvette Z06 GT3 — Watkins Glen">
-                <div class="thumb-inner">
-                    <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg"
-                         alt="Corvette Z06 GT3 solo at Watkins Glen" loading="lazy">
-                </div>
-                <div class="thumb-caption">Corvette Z06 GT3 — Watkins Glen</div>
-            </a>
-
-            <a href="#" class="thumb-item"
-               data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg"
-               data-caption="Ferrari 296 GT3 vs Corvette Z06 — Watkins Glen">
-                <div class="thumb-inner">
-                    <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg"
-                         alt="Ferrari 296 GT3 vs Corvette Z06 GT3 at Watkins Glen" loading="lazy">
-                </div>
-                <div class="thumb-caption">Ferrari 296 GT3 vs Corvette Z06 — Watkins Glen</div>
-            </a>
-
-            <a href="#" class="thumb-item"
-               data-lightbox="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg"
-               data-caption="Hyundai Elantra N TCR — Donington Park">
-                <div class="thumb-inner">
-                    <img src="/homepage-refresh/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg"
-                         alt="Hyundai Elantra N TCR at Donington Park at dusk" loading="lazy">
-                </div>
-                <div class="thumb-caption">Hyundai Elantra N TCR — Donington Park</div>
-            </a>
-
-        </div>
-    </div>
-</section>
-
-<!-- Lightbox modal -->
+<!-- Lightbox -->
 <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
     <div class="lightbox-backdrop"></div>
     <div class="lightbox-frame">
         <button class="lightbox-close" aria-label="Close">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
         </button>
         <img class="lightbox-img" src="" alt="">
         <div class="lightbox-caption"></div>
@@ -276,16 +175,14 @@
 
 
 <footer>
-    <div class="sb-left">
-        <span class="sb-item">⎇ main</span>
-        <span class="sb-sep">|</span>
-        <span class="sb-item">jasoncarvalho.com</span>
+    <span class="footer-name">Jason Carvalho</span>
+    <div class="footer-socials">
+        <a href="https://instagram.com/jase_mk/" target="_blank" rel="noopener">instagram</a>
+        <a href="https://flickr.com/photos/jase_mk/" target="_blank" rel="noopener">flickr</a>
+        <a href="https://youtube.com/@JaseMK2001" target="_blank" rel="noopener">youtube</a>
+        <a href="https://facebook.com/jason.carvalho" target="_blank" rel="noopener">facebook</a>
     </div>
-    <div class="sb-right">
-        <span class="sb-item">UTF-8</span>
-        <span class="sb-sep">|</span>
-        <span class="sb-item">© 2026 Jason Carvalho</span>
-    </div>
+    <span class="footer-copy">© 2026</span>
 </footer>
 
 <script src="/homepage-refresh/js/nav.js"></script>

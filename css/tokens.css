@@ -1,37 +1,17 @@
 /* ============================================================
    DESIGN TOKENS
-   This is the single file to edit when changing the look and
-   feel of the site. All other CSS references these variables.
    ============================================================ */
 :root {
-    /* Backgrounds */
-    --bg:        #f5f7ff;
-    --bg-2:      #edf0fc;
+    --bg:        #f6f8fc;
+    --bg2:       #edf0f9;
     --panel:     #ffffff;
-    --surface:   #eef1ff;
-    --hover:     #e6eaff;
-    --gutter-bg: #f0f3fb;
-
-    /* Borders */
-    --border:    #dde3f4;
-    --border-lt: #c5ceee;
-
-    /* Syntax / accent colours */
-    --blue:      #2563eb;   /* primary accent / functions */
-    --purple:    #7c3aed;   /* keywords */
-    --green:     #16a34a;   /* strings / success */
-    --orange:    #c2610c;   /* types / numbers */
-    --yellow:    #a16207;   /* attributes */
-    --red:       #dc2626;   /* specials / danger */
-    --comment:   #8494c0;   /* code comments */
-    --ln:        #c8d2e8;   /* line numbers */
-
-    /* Text */
-    --text:      #0f172a;
-    --muted:     #4a5680;
-    --dim:       #9aa5c8;
-
-    /* Typography */
+    --border:    #dae0f0;
+    --blue:      #4055e8;
+    --green:     #16a34a;
+    --text:      #141929;
+    --muted:     #56668f;
+    --dim:       #8a9ac4;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-serif:'Newsreader', Georgia, serif;
     --font-mono: 'JetBrains Mono', monospace;
-    --font-head: 'Space Grotesk', sans-serif;
 }
