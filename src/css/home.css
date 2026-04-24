@@ -17,6 +17,30 @@
     margin: 0 auto;
 }
 
+.hero-identity {
+    display: flex;
+    align-items: stretch;
+    gap: 22px;
+    margin-bottom: 32px;
+}
+
+.hero-identity-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-portrait {
+    width: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    flex-shrink: 0;
+    outline: 1px solid var(--border);
+    outline-offset: -1px;
+    box-shadow: 0 4px 16px rgba(20, 25, 41, 0.10);
+}
+
 .hero-eyebrow {
     font-size: 11px;
     font-weight: 700;
@@ -33,7 +57,6 @@
     color: var(--text);
     line-height: 1.0;
     letter-spacing: -0.03em;
-    margin-bottom: 18px;
     text-wrap: balance;
 }
 
@@ -44,7 +67,8 @@
     font-weight: 300;
     color: var(--muted);
     line-height: 1.6;
-    margin-bottom: 32px;
+    margin-top: auto;
+    margin-bottom: 0;
     max-width: 300px;
     text-wrap: pretty;
 }
