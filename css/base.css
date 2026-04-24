@@ -2,7 +2,7 @@
    RESET
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 /* ============================================================
    BASE
@@ -176,8 +176,10 @@ footer {
    ============================================================ */
 .card {
     background: var(--panel);
-    border: 1px solid var(--border);
-    box-shadow: 0 2px 16px rgba(20,25,41,0.07);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.06),
+        0 1px 2px -1px rgba(0, 0, 0, 0.06),
+        0 2px 4px 0 rgba(0, 0, 0, 0.04);
 }
 
 /* ============================================================
@@ -240,15 +242,23 @@ footer {
    LIGHTBOX
    ============================================================ */
 .lightbox {
-    display: none;
+    display: flex;
     position: fixed;
     inset: 0;
     z-index: 1000;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 200ms ease, visibility 200ms;
 }
 
-.lightbox.open { display: flex; }
+.lightbox.open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
 
 .lightbox-backdrop {
     position: absolute;
@@ -265,6 +275,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: scale(0.97);
+    transition: transform 200ms ease;
+}
+
+.lightbox.open .lightbox-frame {
+    transform: scale(1);
 }
 
 .lightbox-img {
@@ -294,13 +310,25 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.15s, color 0.15s;
+    transition: background 150ms ease-out, color 150ms ease-out, transform 150ms ease-out;
+}
+
+.lightbox-close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
 }
 
 .lightbox-close:hover {
     background: rgba(255,255,255,0.1);
     color: #ffffff;
 }
+
+.lightbox-close:active { transform: scale(0.96); }
 
 /* ============================================================
    RESPONSIVE
