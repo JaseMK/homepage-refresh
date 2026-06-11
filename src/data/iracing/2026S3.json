@@ -1,6 +1,30 @@
 {
   "season": "iRacing 2026 Season 3",
   "series": [
+        {
+      "name": "iRacing Lotus 79 Grand Prix Series",
+      "short_name": "Lotus 79",
+      "cars": ["Lotus 79"],
+      "race_duration": "6-33 laps",
+      "race_frequency": "Every 2 hours at :30",
+      "min_ir": 4.0,
+      "splits_at": 38,
+      "drops": 4,
+      "weeks": [
+        { "week": 1, "week_start": "2026-06-16", "track": "Road America", "temp_f": 70, "temp_c": 21, "rain_chance_pct": 0, "race_duration": "21 laps", "completed": false },
+        { "week": 2, "week_start": "2026-06-23", "track": "Silverstone - Historic", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "25 laps", "completed": false },
+        { "week": 3, "week_start": "2026-06-30", "track": "Mugello", "temp_f": 71, "temp_c": 21, "rain_chance_pct": 0, "race_duration": "24 laps", "completed": false },
+        { "week": 4, "week_start": "2026-07-07", "track": "Nürburgring Nordschleife", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 32, "race_duration": "6 laps", "completed": false },
+        { "week": 5, "week_start": "2026-07-14", "track": "Barcelona", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "25 laps", "completed": false },
+        { "week": 6, "week_start": "2026-07-21", "track": "Red Bull Ring", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "28 laps", "completed": false },
+        { "week": 7, "week_start": "2026-07-28", "track": "St. Petersburg", "temp_f": 81, "temp_c": 27, "rain_chance_pct": 0, "race_duration": "33 laps", "completed": false },
+        { "week": 8, "week_start": "2026-08-04", "track": "Zandvoort", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "race_duration": "28 laps", "completed": false },
+        { "week": 9, "week_start": "2026-08-11", "track": "Brands Hatch GP", "temp_f": 73, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "31 laps", "completed": false },
+        { "week": 10, "week_start": "2026-08-18", "track": "Monza", "temp_f": 79, "temp_c": 26, "rain_chance_pct": 0, "race_duration": "25 laps", "completed": false },
+        { "week": 11, "week_start": "2026-08-25", "track": "Barber Motorsports Park", "temp_f": 76, "temp_c": 24, "rain_chance_pct": 30, "race_duration": "31 laps", "completed": false },
+        { "week": 12, "week_start": "2026-09-01", "track": "Suzuka", "temp_f": 83, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "21 laps", "completed": false }
+      ]
+    },
     {
       "name": "TCR Virtual Challenge - Fixed",
       "short_name": "TCR Fixed",
@@ -11,18 +35,18 @@
       "splits_at": 20,
       "drops": 4,
       "weeks": [
-        { "week": 1, "week_start": "2026-06-16", "track": "Oulton Park Circuit - International", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
-        { "week": 2, "week_start": "2026-06-23", "track": "Watkins Glen International - Boot", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 32, "completed": false },
-        { "week": 3, "week_start": "2026-06-30", "track": "Road Atlanta - Full Course", "temp_f": 84, "temp_c": 29, "rain_chance_pct": 0, "completed": false },
-        { "week": 4, "week_start": "2026-07-07", "track": "Canadian Tire Motorsports Park", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "completed": false },
-        { "week": 5, "week_start": "2026-07-14", "track": "Nürburgring Grand-Prix-Strecke - BES/WEC", "temp_f": 69, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
-        { "week": 6, "week_start": "2026-07-21", "track": "Road America - Full Course", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "completed": false },
-        { "week": 7, "week_start": "2026-07-28", "track": "Motorsport Arena Oschersleben - Grand Prix", "temp_f": 69, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
-        { "week": 8, "week_start": "2026-08-04", "track": "St. Petersburg Grand Prix - Grand Prix", "temp_f": 84, "temp_c": 29, "rain_chance_pct": 0, "completed": false },
-        { "week": 9, "week_start": "2026-08-11", "track": "Autodromo Internazionale Enzo e Dino Ferrari - Grand Prix", "temp_f": 73, "temp_c": 23, "rain_chance_pct": 0, "completed": false },
-        { "week": 10, "week_start": "2026-08-18", "track": "Virginia International Raceway - Full Course", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 29, "completed": false },
-        { "week": 11, "week_start": "2026-08-25", "track": "Brands Hatch Circuit - Grand Prix", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
-        { "week": 12, "week_start": "2026-09-01", "track": "Okayama International Circuit - Full Course", "temp_f": 81, "temp_c": 27, "rain_chance_pct": 0, "completed": false }
+        { "week": 1, "week_start": "2026-06-16", "track": "Oulton Park", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
+        { "week": 2, "week_start": "2026-06-23", "track": "Watkins Glen", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 32, "completed": false },
+        { "week": 3, "week_start": "2026-06-30", "track": "Road Atlanta", "temp_f": 84, "temp_c": 29, "rain_chance_pct": 0, "completed": false },
+        { "week": 4, "week_start": "2026-07-07", "track": "Mosport", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "completed": false },
+        { "week": 5, "week_start": "2026-07-14", "track": "Nürburgring GP", "temp_f": 69, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
+        { "week": 6, "week_start": "2026-07-21", "track": "Road America", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "completed": false },
+        { "week": 7, "week_start": "2026-07-28", "track": "Oschersleben", "temp_f": 69, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
+        { "week": 8, "week_start": "2026-08-04", "track": "St. Petersburg GP", "temp_f": 84, "temp_c": 29, "rain_chance_pct": 0, "completed": false },
+        { "week": 9, "week_start": "2026-08-11", "track": "Imola", "temp_f": 73, "temp_c": 23, "rain_chance_pct": 0, "completed": false },
+        { "week": 10, "week_start": "2026-08-18", "track": "Virginia VIR", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 29, "completed": false },
+        { "week": 11, "week_start": "2026-08-25", "track": "Brands Hatch GP", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
+        { "week": 12, "week_start": "2026-09-01", "track": "Okayama", "temp_f": 81, "temp_c": 27, "rain_chance_pct": 0, "completed": false }
       ]
     },
     {
@@ -35,18 +59,18 @@
       "splits_at": 30,
       "drops": 4,
       "weeks": [
-        { "week": 1, "week_start": "2026-06-16", "track": "Circuit des 24 Heures du Mans - 24 Heures du Mans", "temp_f": 69, "temp_c": 21, "rain_chance_pct": 0, "completed": false },
-        { "week": 2, "week_start": "2026-06-23", "track": "Watkins Glen International - Boot", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 29, "completed": false },
-        { "week": 3, "week_start": "2026-06-30", "track": "Autodromo Internazionale del Mugello - Grand Prix", "temp_f": 80, "temp_c": 27, "rain_chance_pct": 0, "completed": false },
-        { "week": 4, "week_start": "2026-07-07", "track": "Canadian Tire Motorsports Park", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 0, "completed": false },
-        { "week": 5, "week_start": "2026-07-14", "track": "Qualcomm Circuit (Naval Base Coronado)", "temp_f": 76, "temp_c": 25, "rain_chance_pct": 0, "completed": false },
-        { "week": 6, "week_start": "2026-07-21", "track": "Road America - Full Course", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "completed": false },
-        { "week": 7, "week_start": "2026-07-28", "track": "Suzuka International Racing Course - Grand Prix", "temp_f": 85, "temp_c": 30, "rain_chance_pct": 0, "completed": false },
-        { "week": 8, "week_start": "2026-08-04", "track": "St. Petersburg Grand Prix - Grand Prix", "temp_f": 83, "temp_c": 29, "rain_chance_pct": 0, "completed": false },
+        { "week": 1, "week_start": "2026-06-16", "track": "Le Mans", "temp_f": 69, "temp_c": 21, "rain_chance_pct": 0, "completed": false },
+        { "week": 2, "week_start": "2026-06-23", "track": "Watkins Glen", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 29, "completed": false },
+        { "week": 3, "week_start": "2026-06-30", "track": "Mugello", "temp_f": 80, "temp_c": 27, "rain_chance_pct": 0, "completed": false },
+        { "week": 4, "week_start": "2026-07-07", "track": "Mosport", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 0, "completed": false },
+        { "week": 5, "week_start": "2026-07-14", "track": "Qualcomm (Naval Base Coronado)", "temp_f": 76, "temp_c": 25, "rain_chance_pct": 0, "completed": false },
+        { "week": 6, "week_start": "2026-07-21", "track": "Road America", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "completed": false },
+        { "week": 7, "week_start": "2026-07-28", "track": "Suzuka", "temp_f": 85, "temp_c": 30, "rain_chance_pct": 0, "completed": false },
+        { "week": 8, "week_start": "2026-08-04", "track": "St. Petersburg GP", "temp_f": 83, "temp_c": 29, "rain_chance_pct": 0, "completed": false },
         { "week": 9, "week_start": "2026-08-11", "track": "Phillip Island Circuit", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
-        { "week": 10, "week_start": "2026-08-18", "track": "Virginia International Raceway - Full Course", "temp_f": 76, "temp_c": 24, "rain_chance_pct": 31, "completed": false },
-        { "week": 11, "week_start": "2026-08-25", "track": "Autodromo Internazionale Enzo e Dino Ferrari - Grand Prix", "temp_f": 77, "temp_c": 25, "rain_chance_pct": 0, "completed": false },
-        { "week": 12, "week_start": "2026-09-01", "track": "Okayama International Circuit - Full Course", "temp_f": 80, "temp_c": 27, "rain_chance_pct": 0, "completed": false }
+        { "week": 10, "week_start": "2026-08-18", "track": "Virginia VIR", "temp_f": 76, "temp_c": 24, "rain_chance_pct": 31, "completed": false },
+        { "week": 11, "week_start": "2026-08-25", "track": "Imola", "temp_f": 77, "temp_c": 25, "rain_chance_pct": 0, "completed": false },
+        { "week": 12, "week_start": "2026-09-01", "track": "Okayama", "temp_f": 80, "temp_c": 27, "rain_chance_pct": 0, "completed": false }
       ]
     },
     {
@@ -59,17 +83,17 @@
       "splits_at": 30,
       "drops": 4,
       "weeks": [
-        { "week": 1, "week_start": "2026-06-16", "track": "Autodromo Nazionale Monza - Grand Prix", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
-        { "week": 2, "week_start": "2026-06-23", "track": "Suzuka International Racing Course - Grand Prix", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
-        { "week": 3, "week_start": "2026-06-30", "track": "Circuit de Spa-Francorchamps - Grand Prix Pits", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
-        { "week": 4, "week_start": "2026-07-07", "track": "Mount Panorama Circuit", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
-        { "week": 5, "week_start": "2026-07-14", "track": "Circuit de Barcelona Catalunya - Historic", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 31, "race_duration": "45 mins", "completed": false },
-        { "week": 6, "week_start": "2026-07-21", "track": "Nürburgring Combined - Gesamtstrecke 24h", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
-        { "week": 7, "week_start": "2026-07-28", "track": "Circuit des 24 Heures du Mans - 24 Heures du Mans", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
-        { "week": 8, "week_start": "2026-08-04", "track": "Fuji International Speedway - No Chicane", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
-        { "week": 9, "week_start": "2026-08-11", "track": "Sebring International Raceway - International", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
+        { "week": 1, "week_start": "2026-06-16", "track": "Monza", "temp_f": 71, "temp_c": 22, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
+        { "week": 2, "week_start": "2026-06-23", "track": "Suzuka", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
+        { "week": 3, "week_start": "2026-06-30", "track": "Spa", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
+        { "week": 4, "week_start": "2026-07-07", "track": "Bathurst", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
+        { "week": 5, "week_start": "2026-07-14", "track": "Barcelona", "temp_f": 75, "temp_c": 24, "rain_chance_pct": 31, "race_duration": "45 mins", "completed": false },
+        { "week": 6, "week_start": "2026-07-21", "track": "Nürburgring Combined - 24h", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
+        { "week": 7, "week_start": "2026-07-28", "track": "Le Mans", "temp_f": 67, "temp_c": 20, "rain_chance_pct": 0, "race_duration": "60 mins", "completed": false },
+        { "week": 8, "week_start": "2026-08-04", "track": "Fuji", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
+        { "week": 9, "week_start": "2026-08-11", "track": "Sebring", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
         { "week": 10, "week_start": "2026-08-18", "track": "Red Bull Ring - Grand Prix", "temp_f": 69, "temp_c": 21, "rain_chance_pct": 34, "race_duration": "45 mins", "completed": false },
-        { "week": 11, "week_start": "2026-08-25", "track": "Autodromo Internazionale Enzo e Dino Ferrari - Grand Prix", "temp_f": 83, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
+        { "week": 11, "week_start": "2026-08-25", "track": "Imola", "temp_f": 83, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false },
         { "week": 12, "week_start": "2026-09-01", "track": "Circuit Gilles Villeneuve", "temp_f": 69, "temp_c": 20, "rain_chance_pct": 0, "race_duration": "45 mins", "completed": false }
       ]
     },
@@ -83,43 +107,20 @@
       "splits_at": 50,
       "drops": 4,
       "weeks": [
-        { "week": 1, "week_start": "2026-06-16", "track": "Watkins Glen International - Boot", "temp_f": 74, "temp_c": 24, "rain_chance_pct": 0, "completed": false },
-        { "week": 2, "week_start": "2026-06-23", "track": "Mobility Resort Motegi - Grand Prix", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "completed": false },
-        { "week": 3, "week_start": "2026-06-30", "track": "Circuit de Spa-Francorchamps - Grand Prix Pits", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 0, "completed": false },
-        { "week": 4, "week_start": "2026-07-07", "track": "Canadian Tire Motorsports Park", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 25, "completed": false },
-        { "week": 5, "week_start": "2026-07-14", "track": "Autódromo José Carlos Pace - Grand Prix", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "completed": false },
-        { "week": 6, "week_start": "2026-07-21", "track": "Road America - Full Course", "temp_f": 79, "temp_c": 26, "rain_chance_pct": 0, "completed": false },
-        { "week": 7, "week_start": "2026-07-28", "track": "Autodromo Nazionale Monza - Grand Prix", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
-        { "week": 8, "week_start": "2026-08-04", "track": "Fuji International Speedway - Grand Prix", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "completed": false },
-        { "week": 9, "week_start": "2026-08-11", "track": "Daytona International Speedway - Road Course", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "completed": false },
-        { "week": 10, "week_start": "2026-08-18", "track": "Virginia International Raceway - Full Course", "temp_f": 80, "temp_c": 27, "rain_chance_pct": 0, "completed": false },
-        { "week": 11, "week_start": "2026-08-25", "track": "Road Atlanta - Full Course", "temp_f": 77, "temp_c": 25, "rain_chance_pct": 0, "completed": false },
-        { "week": 12, "week_start": "2026-09-01", "track": "Circuit des 24 Heures du Mans - 24 Heures du Mans", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 31, "completed": false }
-      ]
-    },
-    {
-      "name": "iRacing Lotus 79 Grand Prix Series",
-      "short_name": "Lotus 79",
-      "cars": ["Lotus 79"],
-      "race_duration": "6-33 laps",
-      "race_frequency": "Every 2 hours at :30",
-      "min_ir": 4.0,
-      "splits_at": 38,
-      "drops": 4,
-      "weeks": [
-        { "week": 1, "week_start": "2026-06-16", "track": "Road America - Full Course", "temp_f": 70, "temp_c": 21, "rain_chance_pct": 0, "race_duration": "21 laps", "completed": false },
-        { "week": 2, "week_start": "2026-06-23", "track": "[Legacy] Silverstone Circuit - 2008 - Historical Grand Prix", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "race_duration": "25 laps", "completed": false },
-        { "week": 3, "week_start": "2026-06-30", "track": "Autodromo Internazionale del Mugello - Grand Prix", "temp_f": 71, "temp_c": 21, "rain_chance_pct": 0, "race_duration": "24 laps", "completed": false },
-        { "week": 4, "week_start": "2026-07-07", "track": "Nürburgring Nordschleife - Industriefahrten", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 32, "race_duration": "6 laps", "completed": false },
-        { "week": 5, "week_start": "2026-07-14", "track": "Circuit de Barcelona Catalunya - Historic", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "25 laps", "completed": false },
-        { "week": 6, "week_start": "2026-07-21", "track": "Red Bull Ring - Grand Prix", "temp_f": 74, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "28 laps", "completed": false },
-        { "week": 7, "week_start": "2026-07-28", "track": "St. Petersburg Grand Prix - Grand Prix", "temp_f": 81, "temp_c": 27, "rain_chance_pct": 0, "race_duration": "33 laps", "completed": false },
-        { "week": 8, "week_start": "2026-08-04", "track": "Circuit Zandvoort - Grand Prix", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "race_duration": "28 laps", "completed": false },
-        { "week": 9, "week_start": "2026-08-11", "track": "Brands Hatch Circuit - Grand Prix", "temp_f": 73, "temp_c": 23, "rain_chance_pct": 0, "race_duration": "31 laps", "completed": false },
-        { "week": 10, "week_start": "2026-08-18", "track": "Autodromo Nazionale Monza - GP without first chicane", "temp_f": 79, "temp_c": 26, "rain_chance_pct": 0, "race_duration": "25 laps", "completed": false },
-        { "week": 11, "week_start": "2026-08-25", "track": "Barber Motorsports Park", "temp_f": 76, "temp_c": 24, "rain_chance_pct": 30, "race_duration": "31 laps", "completed": false },
-        { "week": 12, "week_start": "2026-09-01", "track": "Suzuka International Racing Course - Grand Prix", "temp_f": 83, "temp_c": 28, "rain_chance_pct": 0, "race_duration": "21 laps", "completed": false }
+        { "week": 1, "week_start": "2026-06-16", "track": "Watkins Glen", "temp_f": 74, "temp_c": 24, "rain_chance_pct": 0, "completed": false },
+        { "week": 2, "week_start": "2026-06-23", "track": "Motegi", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "completed": false },
+        { "week": 3, "week_start": "2026-06-30", "track": "Spa", "temp_f": 78, "temp_c": 26, "rain_chance_pct": 0, "completed": false },
+        { "week": 4, "week_start": "2026-07-07", "track": "Mosport", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 25, "completed": false },
+        { "week": 5, "week_start": "2026-07-14", "track": "Interlagos", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 0, "completed": false },
+        { "week": 6, "week_start": "2026-07-21", "track": "Road America", "temp_f": 79, "temp_c": 26, "rain_chance_pct": 0, "completed": false },
+        { "week": 7, "week_start": "2026-07-28", "track": "Monza", "temp_f": 68, "temp_c": 20, "rain_chance_pct": 0, "completed": false },
+        { "week": 8, "week_start": "2026-08-04", "track": "Fuji", "temp_f": 72, "temp_c": 22, "rain_chance_pct": 0, "completed": false },
+        { "week": 9, "week_start": "2026-08-11", "track": "Daytona", "temp_f": 82, "temp_c": 28, "rain_chance_pct": 0, "completed": false },
+        { "week": 10, "week_start": "2026-08-18", "track": "Virginia VIR", "temp_f": 80, "temp_c": 27, "rain_chance_pct": 0, "completed": false },
+        { "week": 11, "week_start": "2026-08-25", "track": "Road Atlanta", "temp_f": 77, "temp_c": 25, "rain_chance_pct": 0, "completed": false },
+        { "week": 12, "week_start": "2026-09-01", "track": "Le Mans", "temp_f": 67, "temp_c": 19, "rain_chance_pct": 31, "completed": false }
       ]
     }
+
   ]
 }
