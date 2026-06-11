@@ -24,19 +24,19 @@ nav {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 500;
-    height: 50px;
+    height: 52px;
     background: var(--panel);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 52px;
+    padding: 0 40px;
 }
 
 .nav-logo {
     font-family: var(--font-serif);
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
     color: var(--text);
     text-decoration: none;
     flex-shrink: 0;
@@ -45,13 +45,13 @@ nav {
 .nav-tabs {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 26px;
     list-style: none;
 }
 
 .nav-tabs li a {
     font-family: var(--font-sans);
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 500;
     color: var(--muted);
     text-decoration: none;
@@ -60,7 +60,13 @@ nav {
 }
 
 .nav-tabs li a:hover { color: var(--text); }
-.nav-tabs li a.active { color: var(--blue); }
+
+.nav-tabs li a.active {
+    color: var(--text);
+    font-weight: 700;
+    border-bottom: 2px solid var(--blue);
+    padding-bottom: 2px;
+}
 
 .nav-toggle {
     display: none;
@@ -76,37 +82,17 @@ nav {
    FOOTER
    ============================================================ */
 footer {
-    background: var(--panel);
     border-top: 1px solid var(--border);
-    padding: 24px 52px;
+    height: 44px;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.footer-name {
-    font-family: var(--font-serif);
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--text);
-}
-
-.footer-socials {
-    display: flex;
-    gap: 24px;
-}
-
-.footer-socials a {
-    font-size: 12.5px;
-    color: var(--blue);
-    text-decoration: none;
-    transition: opacity 0.15s;
-}
-
-.footer-socials a:hover { opacity: 0.7; }
-
-.footer-copy {
-    font-size: 12px;
+footer span {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
     color: var(--dim);
 }
 
@@ -183,45 +169,32 @@ footer {
 }
 
 /* ============================================================
-   PAGE HEADER — sub-pages
+   PAGE HEAD — sub-pages
    ============================================================ */
-.page-header {
-    margin-top: 50px;
-    padding: 3rem 52px 2.5rem;
-    border-bottom: 1px solid var(--border);
-    background: var(--bg);
-}
-
-.page-header-inner {
+.page-head {
     max-width: 1180px;
-    margin: 0 auto;
+    margin: 52px auto 0;
+    padding: 40px 52px 0;
 }
 
-.page-breadcrumb {
-    font-size: 11px;
-    color: var(--dim);
-    margin-bottom: 0.75rem;
+.page-head--narrow {
+    max-width: 860px;
+    padding: 40px 40px 0;
 }
-
-.page-breadcrumb a { color: var(--dim); text-decoration: none; }
-.page-breadcrumb a:hover { color: var(--blue); }
-.page-breadcrumb .bc-sep { color: var(--dim); margin: 0 0.25rem; }
-.page-breadcrumb .bc-current { color: var(--blue); }
 
 .page-title {
     font-family: var(--font-serif);
     font-weight: 600;
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-size: 34px;
     line-height: 1.1;
-    letter-spacing: -0.02em;
     color: var(--text);
-    margin-bottom: 0.4rem;
 }
 
 .page-subtitle {
     font-size: 13px;
     color: var(--muted);
-    font-weight: 300;
+    margin-top: 8px;
+    line-height: 1.6;
 }
 
 /* ============================================================
@@ -230,7 +203,12 @@ footer {
 .page-content {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 3rem 52px;
+    padding: 8px 52px 56px;
+}
+
+.page-content--narrow {
+    max-width: 860px;
+    padding: 8px 40px 56px;
 }
 
 .site-section {
@@ -335,14 +313,14 @@ footer {
    ============================================================ */
 @media (max-width: 860px) {
     nav { padding: 0 24px; }
-    .page-header { padding: 2.5rem 24px 2rem; }
-    .page-content { padding: 2.5rem 24px; }
-    footer { padding: 20px 24px; }
+    .page-head { padding: 32px 24px 0; }
+    .page-content { padding: 8px 24px 48px; }
+    footer { padding: 0 24px; }
 
     .nav-tabs {
         display: none;
         position: absolute;
-        top: 50px; left: 0; right: 0;
+        top: 52px; left: 0; right: 0;
         background: var(--panel);
         border-bottom: 1px solid var(--border);
         flex-direction: column;
@@ -357,10 +335,4 @@ footer {
         font-size: 13px;
     }
     .nav-toggle { display: flex; }
-
-    footer {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-    .footer-socials { gap: 16px; }
 }

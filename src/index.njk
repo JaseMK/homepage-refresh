@@ -3,245 +3,153 @@ layout: base.njk
 pageTitle: "Jason Carvalho — Developer & Researcher"
 navItem: home
 pageCSS: /css/home.css
-pageJS: /js/lightbox.js
 ---
 
 {% set researchCount = research | length %}
 {% set toolCount = work_tools | length %}
 {% set projCount = personal_projects | length %}
+{% set pubCount = publications | length %}
 
-<!-- ── HERO ─────────────────────────────────────────────── -->
-<section class="hero-section">
-    <div class="hero-inner">
+<main class="hub">
 
-        <!-- Left -->
-        <div class="hero-left">
-            <div class="hero-identity">
-                <img src="{{ '/img/JasonCarvalho_stylised.png' | url }}"
-                     alt="Jason Carvalho"
-                     class="hero-portrait">
-                <div class="hero-identity-text">
-                    <div class="hero-eyebrow">Research Software Engineer</div>
-                    <h1 class="hero-name">Jason<br><em>Carvalho</em></h1>
-                    <p class="hero-bio"><em>Milton Keynes, UK</em> <br />
-                        Projects, code, a few photos and resources, sim racing, links to some work sites 
-                        and publication, and other bits and pieces that are handy to pop online.</p>
-                </div>
-            </div>
+    <!-- ── HERO — intro tile + quick links (primary) ──────── -->
+    <div class="hub-hero">
 
-            <!-- Quick-nav cards -->
-            <div class="hero-cards">
-                <a href="#work" class="hero-card">
-                    <div class="hero-card-header">
-                        <span class="hero-card-label">Work</span>
-                        <span class="hero-card-count">{{ researchCount + toolCount }} items</span>
-                    </div>
-                    <div class="hero-card-desc">Research, papers &amp; tools</div>
-                </a>
-                <a href="#projects" class="hero-card">
-                    <div class="hero-card-header">
-                        <span class="hero-card-label">Projects</span>
-                        <span class="hero-card-count">{{ projCount }} items</span>
-                    </div>
-                    <div class="hero-card-desc">Personal builds</div>
-                </a>
-                <a href="#photos" class="hero-card">
-                    <div class="hero-card-header">
-                        <span class="hero-card-label">Photos</span>
-                        <span class="hero-card-count">4 shots</span>
-                    </div>
-                    <div class="hero-card-desc">Sim racing screenshots</div>
-                </a>
-            </div>
-
-            <!-- Socials -->
-            <div class="hero-socials">
-                <a href="https://instagram.com/jase_mk/" target="_blank" rel="noopener">instagram</a>
-                <a href="https://flickr.com/photos/jase_mk/" target="_blank" rel="noopener">flickr</a>
-                <a href="https://youtube.com/@JaseMK2001" target="_blank" rel="noopener">youtube</a>
-                <a href="https://facebook.com/jason.carvalho" target="_blank" rel="noopener">facebook</a>
-            </div>
+        <div class="intro-tile">
+            <img src="{{ '/img/JasonCarvalho_stylised.png' | url }}"
+                 alt="Jason Carvalho"
+                 class="intro-portrait">
+            <h1 class="intro-name">Jason<br><em>Carvalho</em></h1>
+            <div class="intro-eyebrow">Research Software Engineer</div>
+            <div class="intro-location">Milton Keynes, UK</div>
+            <p class="intro-bio">Projects, code, a few photos and resources, sim racing,
+                links to work sites and publications — bits and pieces that are handy
+                to pop online.</p>
         </div>
 
-        <!-- Right: hero photo -->
-        <div class="hero-right">
-            <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg' | url }}"
-                 alt="Corvette Z06 GT3, Watkins Glen"
-                 class="hero-photo">
-            <p class="hero-photo-caption">Corvette Z06 GT3.R — Watkins Glen, iRacing</p>
+        <div class="quick-links">
+            <div class="ql-col">
+                <div class="ql-head">Find me elsewhere</div>
+                <a href="https://youtube.com/@JaseMK2001" target="_blank" rel="noopener" class="ql-row">
+                    <span class="ql-label">youtube</span>
+                    <span class="ql-detail">@JaseMK2001 — sim racing &amp; project videos</span>
+                    <span class="ql-meta">↗</span>
+                </a>
+                <a href="https://instagram.com/jase_mk/" target="_blank" rel="noopener" class="ql-row">
+                    <span class="ql-label">instagram</span>
+                    <span class="ql-detail">@jase_mk</span>
+                    <span class="ql-meta">↗</span>
+                </a>
+                <a href="https://flickr.com/photos/jase_mk/" target="_blank" rel="noopener" class="ql-row">
+                    <span class="ql-label">flickr</span>
+                    <span class="ql-detail">photostream — sim racing shots</span>
+                    <span class="ql-meta">↗</span>
+                </a>
+                <a href="https://github.com/jasemk" target="_blank" rel="noopener" class="ql-row">
+                    <span class="ql-label">github</span>
+                    <span class="ql-detail">code &amp; project sources</span>
+                    <span class="ql-meta">↗</span>
+                </a>
+                <a href="https://facebook.com/jason.carvalho" target="_blank" rel="noopener" class="ql-row">
+                    <span class="ql-label">facebook</span>
+                    <span class="ql-detail">jason.carvalho</span>
+                    <span class="ql-meta">↗</span>
+                </a>
+            </div>
+            <div class="ql-col">
+                <div class="ql-head">Highlights</div>
+                <a href="{{ '/work/' | url }}#publications" class="ql-row">
+                    <span class="ql-label">latest paper</span>
+                    <span class="ql-detail">{{ publications[0].title }}</span>
+                    <span class="ql-meta">{{ publications[0].year }}</span>
+                </a>
+                {% for proj in personal_projects %}{% if proj.status == 'in progress' %}
+                <a href="{{ '/projects/' | url }}" class="ql-row">
+                    <span class="ql-label">now building</span>
+                    <span class="ql-detail">{{ proj.name }}</span>
+                    <span class="ql-meta">in progress</span>
+                </a>
+                {% endif %}{% endfor %}
+                <a href="{{ '/sim-racing/' | url }}" class="ql-row">
+                    <span class="ql-label">sim racing</span>
+                    <span class="ql-detail">Current season stats &amp; rig setup</span>
+                    <span class="ql-meta">iRacing</span>
+                </a>
+                <a href="mailto:jase@jasoncarvalho.com" class="ql-row">
+                    <span class="ql-label">say hello</span>
+                    <span class="ql-detail">jase@jasoncarvalho.com</span>
+                    <span class="ql-meta">email</span>
+                </a>
+            </div>
         </div>
 
     </div>
-</section>
 
-<!-- ── PROJECTS ──────────────────────────────────────────── -->
-<section id="projects" class="band band--alt">
-    <div class="band-inner">
-        <div class="band-label"><span>Software &amp; builds</span></div>
-        <div class="card-grid card-grid--3">
-            {% for proj in personal_projects %}
-            <div class="card card--padded">
-                <div class="card-header-row">
-                    <h3 class="card-title-serif">{{ proj.name }}</h3>
-                    <span class="status-badge {% if proj.status == 'live' %}status-badge--live{% elif proj.status == 'in progress' %}status-badge--inprogress{% else %}status-badge--complete{% endif %}">{{ proj.status }}</span>
+    <!-- ── EXPLORE — doors (secondary) ────────────────────── -->
+    <div class="hub-explore">
+        <div class="explore-rule"><span>Explore</span></div>
+
+        <div class="doors">
+
+            <a href="{{ '/projects/' | url }}" class="door">
+                <div class="door-head">
+                    <span class="door-label">Projects</span>
+                    <span class="door-count">{{ projCount | zeroPad(2) }}</span>
                 </div>
-                <p class="card-desc">{{ proj.description }}</p>
-                <div class="card-footer-row">
-                    {% if proj.stack %}<span class="card-stack">{{ proj.stack }}</span>{% else %}<span></span>{% endif %}
-                    <a href="{{ proj.url }}" class="card-link" target="_blank" rel="noopener">view ↗</a>
+                <div class="door-rows">
+                    {% for proj in personal_projects %}
+                    <div class="door-row">
+                        <span class="door-row-title">{{ proj.name }}</span>
+                        <span class="door-row-meta">{{ proj.status }}</span>
+                    </div>
+                    {% endfor %}
                 </div>
-            </div>
-            {% endfor %}
+                <div class="door-footer">all projects →</div>
+            </a>
+
+            <a href="{{ '/work/' | url }}" class="door">
+                <div class="door-head">
+                    <span class="door-label">Work</span>
+                    <span class="door-count">tools · research</span>
+                </div>
+                <div class="door-rows">
+                    <div class="door-row">
+                        <span class="door-row-title">Tools &amp; applications</span>
+                        <span class="door-row-meta">{{ toolCount | zeroPad(2) }}</span>
+                    </div>
+                    <div class="door-row">
+                        <span class="door-row-title">Research projects</span>
+                        <span class="door-row-meta">{{ researchCount | zeroPad(2) }}</span>
+                    </div>
+                    <div class="door-row">
+                        <span class="door-row-title">Publications</span>
+                        <span class="door-row-meta">{{ pubCount | zeroPad(2) }}</span>
+                    </div>
+                </div>
+                <div class="door-footer">work &amp; publications →</div>
+            </a>
+
+            <a href="{{ '/photos/' | url }}" class="door door--image">
+                <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg' | url }}"
+                     alt="Ferrari 296 GT3 vs Corvette Z06, Watkins Glen" loading="lazy">
+                <div class="door-shade"></div>
+                <div class="door-image-bar">
+                    <span class="door-image-label">Photos</span>
+                    <span class="door-image-cta">gallery →</span>
+                </div>
+            </a>
+
+            <a href="{{ '/sim-racing/' | url }}" class="door door--image">
+                <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg' | url }}"
+                     alt="Hyundai Elantra N TCR, Donington Park" loading="lazy">
+                <div class="door-shade"></div>
+                <div class="door-image-bar">
+                    <span class="door-image-label">Sim racing</span>
+                    <span class="door-image-cta">stats &amp; setup →</span>
+                </div>
+            </a>
+
         </div>
     </div>
-</section>
 
-<!-- ── WORK ─────────────────────────────────────────────── -->
-<div id="work">
-
-    <!-- Tools & applications -->
-    <section class="band band--deep">
-        <div class="band-inner">
-            <div class="band-label"><span>Tools &amp; applications</span></div>
-            <div class="card-grid card-grid--3">
-                {% for tool in work_tools %}
-                <div class="card card--padded">
-                    <div class="card-header-row">
-                        <h3 class="card-title-serif">{{ tool.name }}</h3>
-                        <span class="status-badge {% if tool.status == 'live' %}status-badge--live{% elif tool.status == 'in progress' %}status-badge--inprogress{% else %}status-badge--complete{% endif %}">{{ tool.status }}</span>
-                    </div>
-                    <p class="card-desc">{{ tool.description }}</p>
-                    <div class="card-footer-row">
-                        <span class="card-stack">{{ tool.stack }}</span>
-                        <a href="{{ tool.url }}" class="card-link" target="_blank" rel="noopener">visit ↗</a>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <!-- Research projects -->
-    <section class="band band--alt">
-        <div class="band-inner">
-            <div class="band-label"><span>Research projects</span></div>
-            <div class="card-grid card-grid--3">
-                {% for item in research %}
-                <div class="card card--padded">
-                    <div class="card-meta-row">
-                        <span class="card-year">{{ item.year }}</span>
-                        <span class="tag">{% if loop.first %}ongoing{% else %}complete{% endif %}</span>
-                    </div>
-                    <h3 class="card-title">{{ item.title }}</h3>
-                    <p class="card-desc">{{ item.description }}</p>
-                    <div class="card-tags">
-                        {% for t in item.tags %}<span class="tag">{{ t }}</span>{% endfor %}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <!-- Work project websites -->
-    <section class="band band--deep">
-        <div class="band-inner">
-            <div class="band-label"><span>Work project websites</span></div>
-            <div class="ext-list">
-                {% for ext in work_external %}
-                <a href="{{ ext.url }}" target="_blank" rel="noopener" class="ext-card card">
-                    <div>
-                        <div class="ext-card-name">{{ ext.name }}</div>
-                        <div class="ext-card-desc">{{ ext.description }}</div>
-                    </div>
-                    <span class="ext-card-url">{{ ext.url_label }} ↗</span>
-                </a>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications -->
-    <section class="band band--alt">
-        <div class="band-inner">
-            <div class="band-label"><span>Publications</span></div>
-            <div class="pub-list">
-                {% for pub in publications %}
-                <div class="pub-row">
-                    <span class="pub-num">{% if loop.index < 10 %}0{{ loop.index }}{% else %}{{ loop.index }}{% endif %}</span>
-                    <div class="pub-body">
-                        <div class="pub-authors">{{ pub.authors }}</div>
-                        <div class="pub-title">{{ pub.title }}</div>
-                        <div class="pub-venue">{{ pub.venue }}</div>
-                    </div>
-                    <span class="pub-year">{{ pub.year }}</span>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-</div>
-
-<!-- ── PHOTOS ────────────────────────────────────────────── -->
-<section id="photos" class="band band--deep">
-    <div class="band-inner">
-        <div class="band-label"><span>Sim racing photos</span></div>
-        <div class="photo-grid-4">
-            <div class="photo-4-item">
-                <button class="photo-item"
-                    data-lightbox="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg' | url }}"
-                    data-caption="Corvette Z06 GT3 — Watkins Glen">
-                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.09.51.45.jpg' | url }}"
-                         alt="Corvette Z06 GT3, Watkins Glen" loading="lazy">
-                </button>
-                <p class="photo-caption">Corvette Z06 GT3.R · Watkins Glen</p>
-            </div>
-            <div class="photo-4-item">
-                <button class="photo-item"
-                    data-lightbox="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg' | url }}"
-                    data-caption="Corvette Z06 GT3 — Watkins Glen solo">
-                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.11.03.22.jpg' | url }}"
-                         alt="Corvette Z06 GT3, Watkins Glen solo" loading="lazy">
-                </button>
-                <p class="photo-caption">Corvette Z06 GT3.R · solo stint</p>
-            </div>
-            <div class="photo-4-item">
-                <button class="photo-item"
-                    data-lightbox="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg' | url }}"
-                    data-caption="Ferrari 296 GT3 vs Corvette Z06 — Watkins Glen">
-                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.01.31%20-%2010.13.01.75.jpg' | url }}"
-                         alt="Ferrari 296 GT3 vs Corvette Z06, Watkins Glen" loading="lazy">
-                </button>
-                <p class="photo-caption">Ferrari 296 GT3 vs Corvette Z06 · Watkins Glen</p>
-            </div>
-            <div class="photo-4-item">
-                <button class="photo-item"
-                    data-lightbox="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg' | url }}"
-                    data-caption="Hyundai Elantra N TCR — Donington Park">
-                    <img src="{{ '/img/sims/iRacing%20%20Motorsport%20Simulator%20Screenshot%202026.03.06%20-%2014.24.08.73.jpg' | url }}"
-                         alt="Hyundai Elantra N TCR, Donington Park" loading="lazy">
-                </button>
-                <p class="photo-caption">Hyundai Elantra N TCR · Donington Park</p>
-            </div>
-        </div>
-        <div class="photo-footer">
-            <span class="photo-footer-text">iRacing · Assetto Corsa Competizione</span>
-            <a href="https://flickr.com/photos/jase_mk/" target="_blank" rel="noopener" class="photo-flickr-link">more on flickr ↗</a>
-        </div>
-    </div>
-</section>
-
-<!-- Lightbox -->
-<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
-    <div class="lightbox-backdrop"></div>
-    <div class="lightbox-frame">
-        <button class="lightbox-close" aria-label="Close">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
-        </button>
-        <img class="lightbox-img" src="" alt="">
-        <div class="lightbox-caption"></div>
-    </div>
-</div>
+</main>
