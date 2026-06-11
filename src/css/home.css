@@ -25,13 +25,20 @@
     flex-direction: column;
 }
 
+.intro-identity {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
 .intro-portrait {
-    width: 72px;
-    height: 72px;
+    width: 148px;
+    height: 148px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
 }
 
 .intro-name {
@@ -40,7 +47,6 @@
     font-weight: 600;
     color: #ffffff;
     line-height: 1.05;
-    margin-top: 20px;
 }
 
 .intro-name em { font-style: italic; }
@@ -287,4 +293,10 @@
     }
     .ql-row { grid-template-columns: 88px minmax(0, 1fr) auto; }
     .doors { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .intro-identity { gap: 16px; }
+    .intro-portrait { width: 112px; height: 112px; }
+    .intro-name { font-size: 32px; }
 }
