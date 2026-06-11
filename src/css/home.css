@@ -33,10 +33,7 @@
 
 .intro-portrait {
     width: 148px;
-    height: 148px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
+    height: auto;
     border: 1px solid rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
 }
@@ -297,6 +294,6 @@
 
 @media (max-width: 480px) {
     .intro-identity { gap: 16px; }
-    .intro-portrait { width: 112px; height: 112px; }
+    .intro-portrait { width: 112px; }
     .intro-name { font-size: 32px; }
 }
