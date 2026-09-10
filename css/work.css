@@ -1,147 +1,125 @@
 /* ============================================================
-   WORK PAGE
+   WORK PAGE — compact hub inner page
    ============================================================ */
+.work-section { margin-top: 36px; }
+.work-section:first-child { margin-top: 28px; }
 
-/* Research rows */
-.research-row {
-    display: flex;
-    gap: 1.5rem;
-    padding: 1.1rem 0;
-    border-bottom: 1px solid var(--border);
-    align-items: baseline;
-}
-
-.rr-year {
-    font-size: 0.62rem;
-    color: var(--dim);
-    min-width: 32px;
-    flex-shrink: 0;
-}
-
-.rr-body { flex: 1; }
-
-.rr-title {
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 0.35rem;
-}
-
-.rr-tags {
-    display: flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-}
-
-/* Publication rows */
-.pub-row {
-    display: flex;
-    gap: 1.25rem;
-    padding: 0.9rem 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.pub-num {
-    font-size: 0.62rem;
-    color: var(--dim);
-    min-width: 28px;
-    flex-shrink: 0;
-}
-
-.pub-body { flex: 1; }
-
-.pub-authors {
-    font-size: 0.7rem;
+.work-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 0.2rem;
+    margin-bottom: 12px;
 }
 
-.pub-title {
-    font-size: 0.76rem;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 0.2rem;
+/* Bordered panel of rows */
+.work-panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
 }
 
-.pub-venue {
-    font-size: 0.65rem;
-    color: var(--dim);
-    font-style: italic;
-}
-
-.pub-year {
-    font-size: 0.62rem;
-    color: var(--dim);
-    flex-shrink: 0;
-}
-
-/* Tool cards */
-.tool-grid {
+.work-row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1rem;
-}
-
-.tool-card {
-    display: block;
-    padding: 1.1rem 0;
-    border-bottom: 1px solid var(--border);
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    padding: 16px 22px;
+    align-items: baseline;
     text-decoration: none;
 }
 
-.tc-head {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.35rem;
-}
+.work-row + .work-row { border-top: 1px solid var(--bg2); }
 
-.tc-name {
-    font-size: 0.75rem;
+a.work-row { transition: opacity 0.15s; }
+a.work-row:hover { opacity: 0.75; }
+
+.work-row-name {
+    font-family: var(--font-serif);
+    font-size: 17px;
     font-weight: 600;
     color: var(--text);
 }
 
-.tc-status {
-    font-size: 0.58rem;
-    color: var(--blue);
-    border: 1px solid var(--border);
-    padding: 0.1rem 0.4rem;
-    align-self: flex-start;
-}
-
-.tc-desc {
-    font-size: 0.68rem;
+.work-row-desc {
+    font-size: 12.5px;
     color: var(--muted);
-    line-height: 1.6;
-    margin-bottom: 0.4rem;
+    line-height: 1.55;
+    margin-top: 4px;
+    text-wrap: pretty;
 }
 
-.tc-stack {
-    font-size: 0.6rem;
-    color: var(--dim);
-    font-style: italic;
+.work-row-url {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--blue);
+    white-space: nowrap;
 }
 
-/* External project rows */
-.ext-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.8rem 0;
+/* Status dot */
+.status-dot {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.status-dot::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.status-dot--live       { color: var(--blue); }
+.status-dot--ongoing,
+.status-dot--inprogress { color: #b07a1f; }
+.status-dot--complete   { color: var(--dim); }
+
+/* Publications */
+.pub-row {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    gap: 14px;
+    padding: 11px 0;
     border-bottom: 1px solid var(--border);
-    text-decoration: none;
-    color: var(--text);
+    align-items: baseline;
 }
 
-.ext-row:hover .ext-name { color: var(--blue); }
-
-.ext-name {
-    font-size: 0.75rem;
-    font-weight: 500;
-    transition: color 0.15s;
-}
-
-.ext-url {
-    font-size: 0.65rem;
+.pub-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
     color: var(--dim);
+}
+
+.pub-title {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+    text-wrap: balance;
+}
+
+.pub-meta {
+    font-size: 11.5px;
+    color: var(--dim);
+    margin-top: 2px;
+}
+
+.pub-year {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: var(--dim);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+    .work-row { grid-template-columns: 1fr; gap: 8px; }
+    .pub-row { grid-template-columns: 28px 1fr; }
+    .pub-year { display: none; }
 }
