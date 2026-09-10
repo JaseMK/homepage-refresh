@@ -3,7 +3,7 @@ layout: page.njk
 title: Sim Racing
 navItem: sim-racing
 breadcrumb: sim-racing
-subtitle: resources, setups & tools · iRacing · Assetto Corsa
+subtitle: iRacing season schedule · this week & the season ahead
 pageCSS: /css/sim-racing.css
 pageJS: /js/sim-racing.js
 ---
@@ -20,6 +20,9 @@ pageJS: /js/sim-racing.js
             <p class="schedule-loading">Loading schedule…</p>
         </div>
     </section>
+
+    {# Hidden for now: replays, resources and screenshots.
+       Remove this comment wrapper (and the one around the lightbox) to restore.
 
     <!-- Replays -->
     <section class="site-section">
@@ -119,9 +122,11 @@ pageJS: /js/sim-racing.js
             </button>
         </div>
     </section>
+    #}
 
 </div>
 
+{# Hidden with the screenshots section above.
 <!-- Lightbox -->
 <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
     <div class="lightbox-backdrop"></div>
@@ -135,3 +140,4 @@ pageJS: /js/sim-racing.js
         <div class="lightbox-caption"></div>
     </div>
 </div>
+#}
