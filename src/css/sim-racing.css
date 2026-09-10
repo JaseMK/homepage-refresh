@@ -9,14 +9,327 @@
     font-weight: 300;
 }
 
-.schedule-loading {
+.schedule-loading,
+.sched-empty {
     font-size: 0.72rem;
     color: var(--dim);
     padding: 1rem 0;
 }
 
-/* ---- Schedule table ---- */
-.schedule-wrap { position: relative; }
+/* ---- Licence class badge — iRacing's licence colours ---- */
+.lic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    background: var(--dim);
+}
+
+.lic-R { background: #dc2626; }
+.lic-D { background: #ea580c; }
+.lic-C { background: #ca8a04; }
+.lic-B { background: #16a34a; }
+.lic-A { background: #2563eb; }
+
+/* ---- Settings panel ---- */
+.sched-settings {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    margin-bottom: 28px;
+}
+
+.sched-settings summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.sched-settings summary::-webkit-details-marker { display: none; }
+
+.ss-title {
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 0.15s;
+}
+
+.sched-settings summary:hover .ss-title { color: var(--blue); }
+
+.ss-summary {
+    flex: 1;
+    font-size: 11.5px;
+    color: var(--dim);
+}
+
+.ss-chevron {
+    color: var(--dim);
+    transition: transform 0.15s;
+}
+
+.sched-settings[open] .ss-chevron { transform: rotate(180deg); }
+
+.ss-body {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 16px 14px 18px;
+    border-top: 1px solid var(--border);
+}
+
+.ss-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.sched-settings input[type="checkbox"] {
+    accent-color: var(--blue);
+    margin: 0;
+}
+
+.ss-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.ss-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 8px;
+    border: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.ss-pill:hover { border-color: #b0bde0; }
+
+.ss-pill:has(input:checked) {
+    border-color: var(--blue);
+    background: #eef0fd;
+    color: var(--text);
+}
+
+.ss-series-head {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ss-filter {
+    flex: 1;
+    min-width: 180px;
+    max-width: 320px;
+    padding: 5px 10px;
+    font: inherit;
+    font-size: 12px;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+}
+
+.ss-filter:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.ss-reset {
+    margin-left: auto;
+    padding: 4px 0;
+    font: inherit;
+    font-size: 11.5px;
+    color: var(--blue);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ss-reset:hover { text-decoration: underline; }
+
+.ss-cats {
+    max-height: 420px;
+    overflow-y: auto;
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.ss-cat { padding-top: 12px; }
+
+.ss-cat-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.ss-cat-name span {
+    font-weight: 400;
+    color: var(--dim);
+}
+
+.ss-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 0 16px;
+}
+
+.ss-series {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 4px 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ss-series:hover .ss-name { color: var(--blue); }
+
+.ss-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ss-cat[hidden],
+.ss-series[hidden] { display: none; }
+
+.ss-nomatch {
+    padding: 12px 0;
+    font-size: 12px;
+    color: var(--dim);
+}
+
+/* ---- This week ---- */
+.now-head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.now-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.now-dates {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.now-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.now-card {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: box-shadow 0.15s;
+}
+
+.now-card:hover {
+    box-shadow:
+        0 0 0 1px #b0bde0,
+        0 2px 6px 0 rgba(0, 0, 0, 0.06);
+}
+
+.now-card:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.nc-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.nc-series {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--muted);
+}
+
+.nc-track {
+    font-family: var(--font-serif);
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.nc-layout {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+.nc-length {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 8px;
+    font-variant-numeric: tabular-nums;
+}
+
+.nc-meta {
+    font-size: 11px;
+    color: var(--dim);
+    margin-top: 2px;
+}
+
+.nc-cars {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+.nc-foot {
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 10.5px;
+    color: var(--dim);
+}
+
+.nc-note { color: var(--blue); }
+
+.nc-none {
+    font-size: 12px;
+    color: var(--dim);
+}
+
+/* ---- Season grid ---- */
 .schedule-scroll { overflow-x: auto; }
 
 .schedule-table {
@@ -31,8 +344,13 @@
 
 .schedule-table th {
     text-align: left;
+    vertical-align: bottom;
     padding: 0.4rem 0.75rem 0.7rem 0;
     font-weight: 500;
+}
+
+.th-week,
+.th-date {
     font-size: 0.62rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -40,11 +358,31 @@
     white-space: nowrap;
 }
 
-.th-week { width: 28px; }
-.th-date { width: 72px; }
+.schedule-table .th-week { width: 36px; padding-left: 8px; }
+.th-date { width: 76px; }
+.th-series { min-width: 150px; }
 
-.series-short { display: inline; }
-.series-full  { display: none; }
+.sh-top {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sh-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text);
+}
+
+.sh-sub {
+    display: block;
+    margin-top: 3px;
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--dim);
+}
 
 .schedule-table tbody tr {
     border-bottom: 1px solid var(--border);
@@ -54,102 +392,232 @@
 .schedule-table tbody tr:hover { background: var(--bg2); }
 
 .schedule-table td {
-    padding: 0.65rem 0.75rem 0.65rem 0;
-    vertical-align: middle;
+    padding: 0.6rem 0.75rem 0.6rem 0;
+    vertical-align: top;
 }
 
-/* Week number */
-.td-week {
+.schedule-table .td-week {
+    padding-left: 8px;
+    font-family: var(--font-mono);
     font-size: 0.62rem;
     color: var(--dim);
 }
 
-/* Week-of date */
 .td-date {
     font-size: 0.65rem;
     color: var(--dim);
     white-space: nowrap;
 }
 
-/* Track name cell */
-.td-track {
-    font-weight: 400;
-    white-space: nowrap;
+.row-flag {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.56rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue);
 }
 
-/* Completed race */
-.td-completed .track-name { color: var(--dim); font-weight: 300; }
+.td-track { cursor: pointer; }
+.td-track:hover { background: var(--panel); }
 
-.track-tick {
-    color: var(--green);
-    margin-right: 0.35rem;
+.td-track:focus-visible,
+.sl-item:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: -2px;
+}
+
+.td-empty { color: var(--dim); }
+
+.wk-track {
+    display: block;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.wk-layout {
+    display: block;
     font-size: 0.65rem;
+    line-height: 1.3;
+    color: var(--muted);
 }
 
-.track-dash { color: var(--dim); }
+.wk-length {
+    display: block;
+    margin-top: 3px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
 
-/* Current week */
-.week-current { background: var(--bg2) !important; }
-.week-current .td-track { font-weight: 500; }
+.wk-from {
+    display: block;
+    font-size: 0.6rem;
+    color: var(--blue);
+}
+
+.wk-meta {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.6rem;
+    line-height: 1.4;
+    color: var(--dim);
+}
+
+/* Live race — dot before the track name */
+.is-live .wk-track::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: var(--blue);
+    vertical-align: 0.1em;
+}
+
+/* Current / next week */
+.week-current { background: var(--bg2); }
+.schedule-table .week-current .td-week {
+    box-shadow: inset 3px 0 0 var(--blue);
+    color: var(--blue);
+    font-weight: 700;
+}
+.schedule-table .week-next .td-week { box-shadow: inset 3px 0 0 #b0bde0; }
 
 /* Past weeks */
-.week-past td { opacity: 0.45; }
-.week-past .td-completed .track-name { opacity: 1; color: var(--dim); }
+.week-past td,
+.sl-week.week-past { opacity: 0.45; }
+.week-past td.is-live { opacity: 1; }
 
-/* ---- Tooltip ---- */
-.schedule-tooltip {
+/* ---- Week list (narrow screens) ---- */
+.sched-list { display: none; }
+
+.sl-week {
+    padding: 12px 0 14px;
+    border-top: 1px solid var(--border);
+}
+
+.sl-week.week-current {
+    padding-inline: 12px;
+    box-shadow: inset 3px 0 0 var(--blue);
+}
+
+.sl-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.sl-head .row-flag { margin-top: 0; }
+
+.sl-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--dim);
+}
+
+.sl-dates {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sl-items {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+}
+
+.sl-item {
+    display: grid;
+    grid-template-columns: minmax(96px, 36%) 1fr;
+    gap: 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sl-series {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 11px;
+    line-height: 1.35;
+    color: var(--muted);
+}
+
+.sl-none {
+    font-size: 11px;
+    color: var(--dim);
+}
+
+/* ---- Detail popover ---- */
+.sched-pop {
     position: fixed;
+    z-index: 200;
+    display: none;
+    width: max-content;
+    max-width: min(320px, calc(100vw - 16px));
+    padding: 12px 14px;
+    font-size: 11.5px;
+    color: var(--text);
     background: var(--panel);
     border: 1px solid var(--border);
-    padding: 0.65rem 0.85rem;
-    font-size: 0.65rem;
-    color: var(--text);
-    pointer-events: none;
-    z-index: 200;
-    min-width: 180px;
-    max-width: 220px;
-    box-shadow: 0 4px 16px rgba(15,23,42,0.08);
-    display: none;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
 }
 
-.schedule-tooltip.visible { display: block; }
+.sched-pop.visible { display: block; }
 
-.tt-track {
+.pop-series {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
     font-weight: 600;
-    font-size: 0.72rem;
-    margin-bottom: 0.5rem;
+    color: var(--muted);
 }
 
-.tt-divider {
+.pop-track {
+    margin-top: 6px;
+    font-family: var(--font-serif);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.pop-dates {
+    margin-top: 2px;
+    font-size: 11px;
+    color: var(--dim);
+}
+
+.pop-divider {
+    margin: 10px 0;
     border-top: 1px solid var(--border);
-    margin: 0.5rem 0;
 }
 
-.tt-row {
+.pop-row {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 0.2rem;
+    gap: 16px;
+    margin-bottom: 3px;
 }
 
-.tt-label { color: var(--dim); }
-.tt-val   { color: var(--text); font-weight: 400; }
+.pop-label { color: var(--dim); }
+.pop-val   { text-align: right; }
 
-.tt-val-rain { color: #2563eb; }
-.tt-val-dry  { color: var(--green); }
-.tt-val-freq { color: var(--muted); font-style: italic; }
+.pop-block + .pop-block { margin-top: 8px; }
 
-.tt-cars {
-    font-size: 0.62rem;
+.pop-block .pop-label {
+    display: block;
+    margin-bottom: 1px;
+    font-size: 10.5px;
+}
+
+.pop-text {
     color: var(--muted);
-    margin-bottom: 0.35rem;
-}
-
-.tt-note {
-    font-size: 0.62rem;
-    color: var(--dim);
-    font-style: italic;
-    margin-top: 0.35rem;
+    white-space: pre-line;
 }
 
 /* ---- Resource rows ---- */
@@ -261,6 +729,14 @@
     aspect-ratio: 16/9;
     object-fit: cover;
     display: block;
+}
+
+@media (max-width: 720px) {
+    .sched-grid { display: none; }
+    .sched-list { display: block; }
+    .now-cards  { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin-bottom: 28px; }
+    .now-card   { padding: 12px 14px; }
+    .nc-track   { font-size: 16px; }
 }
 
 @media (max-width: 600px) {
