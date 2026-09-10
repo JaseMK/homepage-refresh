@@ -52,7 +52,7 @@ pageCSS: /css/work.css
         <div class="pub-row">
             <span class="pub-num">{{ loop.index | zeroPad(2) }}</span>
             <div>
-                <div class="pub-title">{{ pub.title }}</div>
+                <div class="pub-title">{% if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</div>
                 <div class="pub-meta">{{ pub.authors }} · {{ pub.venue }}</div>
             </div>
             <span class="pub-year">{{ pub.year }}</span>

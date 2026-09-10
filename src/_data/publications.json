@@ -1,26 +1,42 @@
 [
   {
-    "authors": "Carvalho, J., Co-Author, A., & Another, B.",
-    "title": "Placeholder Paper Title: A Study of Something Important in the Field",
-    "venue": "Journal of Placeholder Research, Vol. 12, No. 3, pp. 100–115",
-    "year": 2024
+    "authors": "Carvalho, J., Daga, E., Mulholland, P., Asprino, L., Uwasomba, C., Daquino, M., Gangemi, A., Maguire, M., & Stoneman, A.",
+    "title": "Integrating Citizen Experiences in Cultural Heritage Archives with a Linked Non-Open Data Hub",
+    "venue": "Journal on Computing and Cultural Heritage, Vol. 17, No. 4, pp. 1–39",
+    "year": 2024,
+    "date": "2024-12-18",
+    "url": "https://doi.org/10.1145/3706063"
   },
   {
-    "authors": "Carvalho, J., & Collaborator, C.",
-    "title": "Another Placeholder Title: Investigating Further Aspects of the Topic",
-    "venue": "Proceedings of the International Conference on Placeholder, pp. 45–52",
-    "year": 2023
+    "authors": "Mulholland, P., Van Kranenburg, P., Carvalho, J., & Daga, E.",
+    "title": "Supporting the End-User Curation of Cultural Heritage Knowledge Graphs",
+    "venue": "Proceedings of the 35th ACM Conference on Hypertext and Social Media, pp. 35–44",
+    "year": 2024,
+    "date": "2024-09-10",
+    "url": "https://doi.org/10.1145/3648188.3675132"
   },
   {
-    "authors": "Carvalho, J., Partner, D., & Researcher, E.",
-    "title": "Foundational Work: Early Explorations in the Research Domain",
-    "venue": "Placeholder Academic Review, Vol. 8, No. 1, pp. 22–37",
-    "year": 2022
+    "authors": "Morales Tirado, A., Carvalho, J., Ratta, M., Uwasomba, C., Mulholland, P., Barlow, H., Herbert, T., & Daga, E.",
+    "title": "Musical Meetups Knowledge Graph (MMKG): A Collection of Evidence for Historical Social Network Analysis",
+    "venue": "The Semantic Web, Lecture Notes in Computer Science, pp. 110–127",
+    "year": 2024,
+    "date": "2024-01-01",
+    "url": "https://doi.org/10.1007/978-3-031-60635-9_7"
   },
   {
-    "authors": "Carvalho, J.",
-    "title": "Preliminary Observations: A Short Note on an Emerging Phenomenon",
-    "venue": "Letters in Placeholder Science, Vol. 5, No. 2, pp. 8–12",
-    "year": 2021
+    "authors": "Mulholland, P., Stoneman, A., Carvalho, J., Daga, E., & Maguire, M.",
+    "title": "Deep Viewpoints: Scripted Support for the Citizen Curation of Museum Artworks",
+    "venue": "Proceedings of the 34th ACM Conference on Hypertext and Social Media, pp. 1–11",
+    "year": 2023,
+    "date": "2023-09-04",
+    "url": "https://doi.org/10.1145/3603163.3609060"
+  },
+  {
+    "authors": "Mulholland, P., Stoneman, A., Barker, N., Maguire, M., Carvalho, J., Daga, E., & Warren, P.",
+    "title": "The Sound of Paintings: Using Citizen Curation to Explore the Cross-Modal Personalization of Museum Experiences",
+    "venue": "Adjunct Proceedings of the 31st ACM Conference on User Modeling, Adaptation and Personalization, pp. 408–418",
+    "year": 2023,
+    "date": "2023-06-16",
+    "url": "https://doi.org/10.1145/3563359.3596662"
   }
 ]

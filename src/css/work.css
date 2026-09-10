@@ -103,6 +103,16 @@ a.work-row:hover { opacity: 0.75; }
     text-wrap: balance;
 }
 
+.pub-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pub-title a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .pub-meta {
     font-size: 11.5px;
     color: var(--dim);

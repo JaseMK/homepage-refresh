@@ -4,7 +4,8 @@
   "description": "Personal website",
   "scripts": {
     "start": "npx @11ty/eleventy --serve --port 8082",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "update-publications": "node scripts/update-publications.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
